@@ -1,9 +1,9 @@
 import { nanoid } from "nanoid";
 import React, { useState } from "react";
 import './App.css';
-import Todo from './Todo';
-import FilterButton from './FilterButton';
-import Form from './Form';
+import Todo from './Components/Todo';
+import FilterButton from './Components/FilterButton';
+import Form from './Components/Form';
 
 const FILTER_MAP = {
   All: () => true,

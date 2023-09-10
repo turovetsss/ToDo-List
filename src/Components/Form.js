@@ -9,12 +9,15 @@ function Form(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    props.addTask(name);
-    setName("");
+    if (name.trim() !== "") {
+      props.addTask(name);
+      setName("");
+    } else {
+      alert("Вы ничего не ввели!");
+    }
   }
   return (
     <form onSubmit={handleSubmit}>
-    
       <input
         type="text"
         id="new-todo-input"
