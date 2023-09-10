@@ -13,7 +13,7 @@ function Form(props) {
       props.addTask(name);
       setName("");
     } else {
-      alert("Вы ничего не ввели!");
+      alert("You didn't enter a value!");
     }
   }
   return (

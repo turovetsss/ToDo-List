@@ -14,7 +14,7 @@ function Todo(props) {
       setNewName("");
       setEditing(false);
     } else {
-      alert("Вы ничего не ввели!");
+      alert("You didn't enter a value!");
     }
   }
   const editingTemplate = (
