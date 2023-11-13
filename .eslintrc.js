@@ -121,7 +121,12 @@ module.exports = {
             },
         ],
         // KEBAB
-        'dirnames/match-kebab-case': 'off',
+        'dirnames/match-kebab-case': [
+            'error',
+            {
+                case: 'kebabCase',
+            },
+        ],
         'unicorn/filename-case': 'off',
         'simple-import-sort/imports': [
             'warn',
