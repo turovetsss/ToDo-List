@@ -127,7 +127,13 @@ module.exports = {
                 case: 'kebabCase',
             },
         ],
-        'unicorn/filename-case': 'off',
+        'unicorn/filename-case': [
+            'error',
+            {
+                case: 'kebabCase',
+                ignore: ['reportWebVitals.js', 'setupTests.js'],
+            },
+        ],
         'simple-import-sort/imports': [
             'warn',
             {
