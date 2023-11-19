@@ -1,3 +1,116 @@
-.Button {
+.button {
     display: flex;
+    border-radius: 100px;
+    outline: none;
+    border: none;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+/* SIZES */
+.button--size-m {
+    padding: 10px 24px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.button--size-l {
+    padding: 16px 28px;
+    height: 56px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.button--filled {
+    background-color: #6750A4;
+    color: #FFFFFF;
+
+    .dark-theme & {
+        background-color: #D0BCFF;
+        color: #381E72;
+    }
+
+    &:hover:not(:disabled) {
+        background-color: #735EAB;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+        cursor: pointer;
+    }
+    
+    &:focus:not(:disabled) {
+        background-color: #7965AF;
+        box-shadow: none;
+    }
+    
+    &:disabled {
+        background-color:#E2DCE4;
+        color: #A9A5AB;
+
+        .dark-theme & {
+            background-color: #2E2B31;
+            color: #737077;
+        }
+    }
+}
+
+.button--outlined {
+    background-color: #FEF7FF;
+    color: #6750A4;
+    border: 1px solid #79747E;
+
+    &:hover:not(:disabled) {
+        background-color: #F2EAF8;
+        border: 1px solid #97929D;
+        cursor: pointer;
+    }
+    
+    &:focus:not(:disabled) {
+        background-color: #EBE3F4;
+        border: 1px solid #8875B8;
+    }
+    
+    &:disabled {
+        background-color:#FEF7FF;
+        border: 1px solid #E9E3EB;
+        color: #BDB8BF;
+    }
+}
+
+.button--filled-hover:not(.button--filled-disabled){
+    background-color: #735EAB;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+    cursor: pointer;
+}
+
+.button--filled-focus:not(.button--filled-disabled) {
+    background-color: #7965AF;
+    box-shadow: none;
+}
+
+.button--filled-disabled {
+    background-color:#E2DCE4;
+    color: #A9A5AB;
+}
+
+.button--outlined-hover:not(.button--outlined-disabled){
+    background-color: #F2EAF8;
+    border: 1px solid #97929D;
+    cursor: pointer;
+}
+
+.button--outlined-focus:not(.button--outlined-disabled) {
+    background-color: #EBE3F4;
+    border: 1px solid #8875B8;
+}
+
+.button--outlined-disabled {
+    background-color:#FEF7FF;
+    border: 1px solid #E9E3EB;
+    color: #BDB8BF;
 }

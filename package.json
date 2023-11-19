@@ -25,9 +25,6 @@
   "lint-staged": {
     "{src,config}/**/*.{js,jsx,ts,tsx}": [
       "eslint"
-    ],
-    "*.css": [
-      "stylelint"
     ]
   },
   "browserslist": {
