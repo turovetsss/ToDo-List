@@ -75,7 +75,42 @@ export const App = props => {
 
     return (
         <div className='todoapp stack-large'>
-            <Button type='button'>New Button</Button>
+            <div className='buttons'>
+                <Button>Label</Button>
+                <Button className='button--filled-hover'>Label</Button>
+                <Button className='button--filled-focus'>Label</Button>
+                <Button disabled={true}>Label</Button>
+            </div>
+            <div className='buttons'>
+                <Button size='l'>Label</Button>
+                <Button size='l' className='button--filled-hover'>
+                    Label
+                </Button>
+                <Button size='l' className='button--filled-focus'>
+                    Label
+                </Button>
+                <Button size='l' disabled={true}>
+                    Label
+                </Button>
+            </div>
+            <div className='buttons'>
+                <Button view='outlined'>Label</Button>
+                <Button view='outlined' className='button--outlined-hover'>
+                    Label
+                </Button>
+                <Button view='outlined' className='button--outlined-focus'>
+                    Label
+                </Button>
+                <Button view='outlined' disabled={true}>
+                    Label
+                </Button>
+            </div>
+            <div className='buttons dark-theme'>
+                <Button>Label</Button>
+                <Button className='button--filled-hover'>Label</Button>
+                <Button className='button--filled-focus'>Label</Button>
+                <Button disabled={true}>Label</Button>
+            </div>
             <br />
             <h1>TodoList</h1>
             <Form addTask={addTask} />
