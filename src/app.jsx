@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { nanoid } from 'nanoid';
 
-import { Button, FilterButton, Form, Todo } from './components';
+import { Button, FilterButton, Form, Slider, Todo } from './components';
 
 import './app.css';
 
@@ -75,6 +75,7 @@ export const App = props => {
 
     return (
         <div className='todoapp stack-large'>
+            <Slider></Slider>
             <Button type='button'>New Button</Button>
             <br />
             <h1>TodoList</h1>
