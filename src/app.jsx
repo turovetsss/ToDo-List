@@ -150,9 +150,45 @@ export const App = props => {
             <h3>Filled Buttons</h3>
             <div className='buttons dark-theme'>
                 <Button>Label</Button>
-                <Button className='button--filled-hover'>Label</Button>
-                <Button className='button--filled-focus'>Label</Button>
+                <Button className='button--filled'>Label</Button>
+                <Button className='button--filled'>Label</Button>
                 <Button disabled={true}>Label</Button>
+            </div>
+            <h3>Outlined Buttons</h3>
+            <div className='buttons dark-theme'>
+                <Button view='outlined'>Label</Button>
+                <Button className='button--outlined-hover'>Label</Button>
+                <Button className='button--outlined-focus'>Label</Button>
+                <Button view='outlined' disabled={true}>
+                    Label
+                </Button>
+            </div>
+            <h3>Text Buttons</h3>
+            <div className='buttons dark-theme'>
+                <Button view='text'>Label</Button>
+                <Button className='button--text-hover'>Label</Button>
+                <Button className='button--text-focus'>Label</Button>
+                <Button view='text' disabled={true}>
+                    Label
+                </Button>
+            </div>
+            <h3>Elevated Buttons</h3>
+            <div className='buttons dark-theme'>
+                <Button view='elevated'>Label</Button>
+                <Button className='button--elevated-hover'>Label</Button>
+                <Button className='button--elevated-focus'>Label</Button>
+                <Button view='elevated' disabled={true}>
+                    Label
+                </Button>
+            </div>
+            <h3>Tonal Buttons</h3>
+            <div className='buttons dark-theme'>
+                <Button view='tonal'>Label</Button>
+                <Button className='button--tonal-hover'>Label</Button>
+                <Button className='button--tonal-focus'>Label</Button>
+                <Button view='tonal' disabled={true}>
+                    Label
+                </Button>
             </div>
             <br />
             <h1>TodoList</h1>
