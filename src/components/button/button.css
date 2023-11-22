@@ -360,3 +360,9 @@
   background-color:#e2dce4;
       color: #9b979e;
 }
+.button--tonal-disabled:not(.button--filled-disabled){
+  .dark-theme & {
+    background-color: #2e2b31;
+    color:#6f6b72;
+}
+}
