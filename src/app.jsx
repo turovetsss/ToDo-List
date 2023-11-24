@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { nanoid } from 'nanoid';
 
-import { Button, FilterButton, Form, Todo } from './components';
+import { Button, FilterButton, Form, Input, Todo } from './components';
 
 import './app.css';
 
@@ -75,6 +75,7 @@ export const App = props => {
 
     return (
         <div className='todoapp stack-large'>
+            <Input type='text' value='text' className='input--filled-hover'></Input>
             <h3>Filled Buttons</h3>
             <div className='buttons'>
                 <Button>Label</Button>
