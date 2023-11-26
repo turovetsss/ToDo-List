@@ -1,4 +1,4 @@
-.input[type='text']{
+.input{
   appearance: none;
 	border: none;
 	outline: none;
@@ -7,7 +7,7 @@
 	border-radius: .2em .2em 0 0;
 	padding: .4em;
 	color: #E91E63;
-  &:focused:not(:disabled) {
-    border-bottom: .2em solid rgba(rgb(185, 185, 69)9, 171, 94);
+  &:hover:not(:disabled) {
+    background: #471ee9;
   }
 }
