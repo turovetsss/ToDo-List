@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { nanoid } from 'nanoid';
 
-import { Button, FilterButton, Form, Todo } from './components';
+import { Button, FilterButton, Form, Input, Todo } from './components';
 
 import './app.css';
 
@@ -75,6 +75,8 @@ export const App = props => {
 
     return (
         <div className='todoapp stack-large'>
+            <Input type='text' value='text' className='input--filled-hover'></Input>
+            <h3>Filled Buttons</h3>
             <div className='buttons'>
                 <Button>Label</Button>
                 <Button className='button--filled-hover'>Label</Button>
@@ -93,6 +95,7 @@ export const App = props => {
                     Label
                 </Button>
             </div>
+            <h3>Outlined Buttons</h3>
             <div className='buttons'>
                 <Button view='outlined'>Label</Button>
                 <Button view='outlined' className='button--outlined-hover'>
@@ -105,11 +108,88 @@ export const App = props => {
                     Label
                 </Button>
             </div>
+            <h3>Text Buttons</h3>
+            <div className='buttons'>
+                <Button view='text'>Label</Button>
+                <Button view='text' className='button--text-hover'>
+                    Label
+                </Button>
+                <Button view='text' className='button--text-focus'>
+                    Label
+                </Button>
+                <Button view='text' disabled={true}>
+                    Label
+                </Button>
+            </div>
+            <h3>Elevated Buttons</h3>
+            <div className='buttons'>
+                <Button view='elevated'>Label</Button>
+                <Button view='elevated' className='button--elevated-hover'>
+                    Label
+                </Button>
+                <Button view='elevated' className='button--elevated-focus'>
+                    Label
+                </Button>
+                <Button view='elevated' disabled={true}>
+                    Label
+                </Button>
+            </div>
+            <h3>Tonal Buttons</h3>
+            <div className='buttons'>
+                <Button view='tonal'>Label</Button>
+                <Button view='tonal' className='button--tonal-hover'>
+                    Label
+                </Button>
+                <Button view='tonal' className='button--tonal-focus'>
+                    Label
+                </Button>
+                <Button view='tonal' disabled={true}>
+                    Label
+                </Button>
+            </div>
+            <h2>Dark Theme</h2>
+            <h3>Filled Buttons</h3>
             <div className='buttons dark-theme'>
                 <Button>Label</Button>
-                <Button className='button--filled-hover'>Label</Button>
-                <Button className='button--filled-focus'>Label</Button>
+                <Button className='button--filled'>Label</Button>
+                <Button className='button--filled'>Label</Button>
                 <Button disabled={true}>Label</Button>
+            </div>
+            <h3>Outlined Buttons</h3>
+            <div className='buttons dark-theme'>
+                <Button view='outlined'>Label</Button>
+                <Button className='button--outlined-hover'>Label</Button>
+                <Button className='button--outlined-focus'>Label</Button>
+                <Button view='outlined' disabled={true}>
+                    Label
+                </Button>
+            </div>
+            <h3>Text Buttons</h3>
+            <div className='buttons dark-theme'>
+                <Button view='text'>Label</Button>
+                <Button className='button--text-hover'>Label</Button>
+                <Button className='button--text-focus'>Label</Button>
+                <Button view='text' disabled={true}>
+                    Label
+                </Button>
+            </div>
+            <h3>Elevated Buttons</h3>
+            <div className='buttons dark-theme'>
+                <Button view='elevated'>Label</Button>
+                <Button className='button--elevated-hover'>Label</Button>
+                <Button className='button--elevated-focus'>Label</Button>
+                <Button view='elevated' disabled={true}>
+                    Label
+                </Button>
+            </div>
+            <h3>Tonal Buttons</h3>
+            <div className='buttons dark-theme'>
+                <Button view='tonal'>Label</Button>
+                <Button className='button--tonal-hover'>Label</Button>
+                <Button className='button--tonal-focus'>Label</Button>
+                <Button view='tonal' disabled={true}>
+                    Label
+                </Button>
             </div>
             <br />
             <h1>TodoList</h1>
