@@ -1,6 +1,10 @@
-### `npm run-script lint`
+### `npm run-script eslint`
 
 Проверка кода eslint-ом
+
+### `npm run-script eslint`
+
+Проверка кода stylelint
 
 ### `npm run-script storybook`
 

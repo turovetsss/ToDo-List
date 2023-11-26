@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 
 import { Button, FilterButton, Form, Input, Todo } from './components';
 
-import './app.css';
+import './app.scss';
 
 const FILTER_MAP = {
     All: () => true,
@@ -158,8 +158,12 @@ export const App = props => {
             <h3>Outlined Buttons</h3>
             <div className='buttons dark-theme'>
                 <Button view='outlined'>Label</Button>
-                <Button className='button--outlined-hover'>Label</Button>
-                <Button className='button--outlined-focus'>Label</Button>
+                <Button view='outlined' className='button--outlined-hover'>
+                    Label
+                </Button>
+                <Button view='outlined' className='button--outlined-focus'>
+                    Label
+                </Button>
                 <Button view='outlined' disabled={true}>
                     Label
                 </Button>
@@ -167,8 +171,12 @@ export const App = props => {
             <h3>Text Buttons</h3>
             <div className='buttons dark-theme'>
                 <Button view='text'>Label</Button>
-                <Button className='button--text-hover'>Label</Button>
-                <Button className='button--text-focus'>Label</Button>
+                <Button view='text' className='button--text-hover'>
+                    Label
+                </Button>
+                <Button view='text' className='button--text-focus'>
+                    Label
+                </Button>
                 <Button view='text' disabled={true}>
                     Label
                 </Button>
@@ -176,8 +184,12 @@ export const App = props => {
             <h3>Elevated Buttons</h3>
             <div className='buttons dark-theme'>
                 <Button view='elevated'>Label</Button>
-                <Button className='button--elevated-hover'>Label</Button>
-                <Button className='button--elevated-focus'>Label</Button>
+                <Button view='elevated' className='button--elevated-hover'>
+                    Label
+                </Button>
+                <Button view='elevated' className='button--elevated-focus'>
+                    Label
+                </Button>
                 <Button view='elevated' disabled={true}>
                     Label
                 </Button>
@@ -185,8 +197,12 @@ export const App = props => {
             <h3>Tonal Buttons</h3>
             <div className='buttons dark-theme'>
                 <Button view='tonal'>Label</Button>
-                <Button className='button--tonal-hover'>Label</Button>
-                <Button className='button--tonal-focus'>Label</Button>
+                <Button view='tonal' className='button--tonal-hover'>
+                    Label
+                </Button>
+                <Button view='tonal' className='button--tonal-focus'>
+                    Label
+                </Button>
                 <Button view='tonal' disabled={true}>
                     Label
                 </Button>

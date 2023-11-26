@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 
-import './button.css';
+import './button.scss';
 
 export const Button = props => {
     const { children, type = 'button', disabled, view = 'filled', size = 'm' } = props;
