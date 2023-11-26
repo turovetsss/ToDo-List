@@ -1,13 +1,14 @@
-.input[type='text']{
-  appearance: none;
-	border: none;
-	outline: none;
-	border-bottom: .2em solid #E91E63;
-	background: rgba(#E91E63, .2);
-	border-radius: .2em .2em 0 0;
-	padding: .4em;
-	color: #E91E63;
-  &:focused:not(:disabled) {
-    border-bottom: .2em solid rgba(rgb(185, 185, 69)9, 171, 94);
-  }
+.input {
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: 0.2em solid #e91e63;
+    background: rgba(#e91e63, 0.2);
+    border-radius: 0.2em 0.2em 0 0;
+    padding: 0.4em;
+    color: #e91e63;
+
+    &:focus:not(:disabled) {
+        border-bottom: 0.2em solid rgba(rgb(185, 185, 69) 9, 171, 94);
+    }
 }
