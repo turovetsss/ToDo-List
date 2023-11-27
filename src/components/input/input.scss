@@ -1,66 +1,65 @@
 .input {
- 
-  appearance: none;
-    border: none;
-    outline: none;
-    border-bottom: 0.2em solid #e91e63;
-    background: #e6e0e9;
-    border-radius: 0.2em 0.2em 0 0;
-    padding: 0.8em;
-    color: #e91e63;
+    position: relative;
 
-    &--filled {
-        color: #ffffff;
-        background: #e6e0e9;
-        border-bottom: 0.1em solid #49454f;
-        .dark-theme & {
-            background-color: #d0bcff;
-            color: #381e72;
-        }
+    &__label {
+        position: absolute;
+        top: 4px;
+        left: 16px;
+        font-family: Roboto, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 133.333% */
+        color: #49454f;
 
-        &:disabled {
-            background-color: #f5eef6;
-            border-bottom: 0.1em solid #a39ea5;
-        
-            .dark-theme & {
-                background-color: #2e2b31;
-                color: #737077;
-            }
-        }
-
-        &-hover:not(-disabled),
-        &:hover:not(:disabled) {
-            background-color: #d6d0d9;
-            border-bottom: 0.1em solid #49454f;
-          
+        .input--invalid & {
+            color: #b3261e;
 
             .dark-theme & {
-                background-color: #d0bcff;
-                color: #381e72;
+                color: yellow;
             }
         }
+    }
 
-        &-invalid:not(-disabled),
-        &:invalid:not(:disabled) {
-            background-color: #e6e0e9;
-            border-bottom:0.2em solid #b3261e;
-          
+    &__control {
+        border: none;
+        outline: none;
+        border-radius: 0.2em 0.2em 0 0;
+        color: #1d1b20;
+        background-color: #e6e0e9;
+        border-bottom: 1px solid #49454f;
+        height: 56px;
+        box-sizing: border-box;
+        padding: 24px 0 8px 16px;
+        font-family: Roboto, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.5px;
+        width: 100%;
 
-            .dark-theme & {
-                background-color: #d0bcff;
-                color: #381e72;
-            }
+        .input--outlined & {
+            background-color: white;
         }
 
-        &-focus:not(-disabled),
-        &:focus:not(:disabled) {
-            background-color: #e6e0e9;
-            border-bottom: 0.2em solid#6750a4;
-
-            .dark-theme & {
-                background-color: #d0bcff;
-                color: #381e72;
-            }
+        .input--invalid & {
+            color: #b3261e;
+            border-bottom: 3px solid #b3261e;
         }
+    }
+
+    &__right-addons {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+
+        .input--invalid & {
+            color: #b3261e;
+        }
+    }
+
+    &__hint {
+        display: block;
     }
 }
