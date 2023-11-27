@@ -53,7 +53,7 @@
         }
 
         &-focus:not(-disabled),
-        &:focus:not(:disabled) {
+        &:focus:not(:disabled){
             background-color: #e6e0e9;
             border-bottom: 0.2em solid#6750a4;
 
