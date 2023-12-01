@@ -1,6 +1,9 @@
-.inputs-container{
-  & > * {
-    margin-right: 16px;
-    margin: 10px;
-  }
+.inputs-container {
+    padding: 16px;
+
+    & > * {
+        margin-right: 16px;
+        max-width: 180px;
+        display: inline-block;
+    }
 }
