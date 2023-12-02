@@ -11,7 +11,7 @@ export const Input = props => {
         <div className={className}>
             <label className='input__label'>Label</label>
             <div className='input__left-addons'></div>
-            <input className='input__control' type={type} disabled={disabled} />
+            <input className='input__control' type={type} disabled={disabled} placeholder='Placeholder' />
             <div className='input__right-addons'></div>
             <span className='input__hint'>Supporting text </span>
         </div>
