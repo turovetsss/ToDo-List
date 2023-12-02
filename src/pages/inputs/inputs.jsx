@@ -38,6 +38,38 @@ export const InputsPage = () => {
                 <Input view='search' invalid={true} className='input--error' />
                 <Input view='search' disabled={true} />
             </div>
+            <h4>With Border input</h4>
+            <div className='inputs-container'>
+                <Input view='border' className='input--border-normal' />
+                <Input view='border' className='input--border input-focus' />
+                <Input view='border' className='input--border-input-hover' />
+                <Input view='border' invalid={true} className='input--error' />
+                <Input view='border' disabled={true} />
+            </div>
+            <h4>Filled Border input</h4>
+            <div className='inputs-container'>
+                <Input view='border search' className='input--border-normal' />
+                <Input view='border search' className='input--border input-focus' />
+                <Input view='border search' className='input--border input-hover' />
+                <Input view='border search' invalid={true} className='input--error' />
+                <Input view='border search' disabled={true} />
+            </div>
+            <h4>None Border input</h4>
+            <div className='inputs-container'>
+                <Input view='border input--none' className='input--border-normal' />
+                <Input view='border input--none' className='input--border input-focus' />
+                <Input view='border input--none' className='input--border input-hover' />
+                <Input view='border input--none' invalid={true} className='input--error' />
+                <Input view='border input--none' disabled={true} />
+            </div>
+            <h4>Search Border input</h4>
+            <div className='inputs-container'>
+                <Input view='border input--search' className='input--border-normal' />
+                <Input view='border input--search' className='input--border input-focus' />
+                <Input view='border input--search' className='input--border input-hover' />
+                <Input view='border input--search' invalid={true} className='input--error' />
+                <Input view='border input--search' disabled={true} />
+            </div>
         </>
     );
 };
