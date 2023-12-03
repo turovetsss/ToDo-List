@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonsPage, FormPage, InputsPage } from 'pages';
+import { ButtonsPage, FormPage, HooksExamples, InputsPage } from 'pages';
 
 export const ROUTES = [
     {
@@ -15,6 +15,11 @@ export const ROUTES = [
     {
         path: '/forms',
         element: <FormPage />,
+        errorElement: <>404</>,
+    },
+    {
+        path: '/hooks-examples',
+        element: <HooksExamples />,
         errorElement: <>404</>,
     },
 ];
