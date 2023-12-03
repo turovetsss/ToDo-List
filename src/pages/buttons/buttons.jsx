@@ -7,16 +7,16 @@ export const ButtonsPage = () => {
             <h3>Filled Buttons</h3>
             <div className='buttons'>
                 <Button>Label</Button>
-                <Button className='button--filled-hover'>Label</Button>
-                <Button className='button--filled-focus'>Label</Button>
+                <Button className='button--view-filled-hover'>Label</Button>
+                <Button className='button--view-filled-focus'>Label</Button>
                 <Button disabled={true}>Label</Button>
             </div>
             <div className='buttons'>
                 <Button size='l'>Label</Button>
-                <Button size='l' className='button--filled-hover'>
+                <Button size='l' className='button--view-filled-hover'>
                     Label
                 </Button>
-                <Button size='l' className='button--filled-focus'>
+                <Button size='l' className='button--view-filled-focus'>
                     Label
                 </Button>
                 <Button size='l' disabled={true}>
@@ -26,10 +26,10 @@ export const ButtonsPage = () => {
             <h3>Outlined Buttons</h3>
             <div className='buttons'>
                 <Button view='outlined'>Label</Button>
-                <Button view='outlined' className='button--outlined-hover'>
+                <Button view='outlined' className='button--view-outlined-hover'>
                     Label
                 </Button>
-                <Button view='outlined' className='button--outlined-focus'>
+                <Button view='outlined' className='button--view-outlined-focus'>
                     Label
                 </Button>
                 <Button view='outlined' disabled={true}>
@@ -39,10 +39,10 @@ export const ButtonsPage = () => {
             <h3>Text Buttons</h3>
             <div className='buttons'>
                 <Button view='text'>Label</Button>
-                <Button view='text' className='button--text-hover'>
+                <Button view='text' className='button--view-text-hover'>
                     Label
                 </Button>
-                <Button view='text' className='button--text-focus'>
+                <Button view='text' className='button--view-text-focus'>
                     Label
                 </Button>
                 <Button view='text' disabled={true}>
@@ -52,10 +52,10 @@ export const ButtonsPage = () => {
             <h3>Elevated Buttons</h3>
             <div className='buttons'>
                 <Button view='elevated'>Label</Button>
-                <Button view='elevated' className='button--elevated-hover'>
+                <Button view='elevated' className='button--view-elevated-hover'>
                     Label
                 </Button>
-                <Button view='elevated' className='button--elevated-focus'>
+                <Button view='elevated' className='button--view-elevated-focus'>
                     Label
                 </Button>
                 <Button view='elevated' disabled={true}>
@@ -65,10 +65,10 @@ export const ButtonsPage = () => {
             <h3>Tonal Buttons</h3>
             <div className='buttons'>
                 <Button view='tonal'>Label</Button>
-                <Button view='tonal' className='button--tonal-hover'>
+                <Button view='tonal' className='button--view-tonal-hover'>
                     Label
                 </Button>
-                <Button view='tonal' className='button--tonal-focus'>
+                <Button view='tonal' className='button--view-tonal-focus'>
                     Label
                 </Button>
                 <Button view='tonal' disabled={true}>
@@ -79,17 +79,17 @@ export const ButtonsPage = () => {
             <h3>Filled Buttons</h3>
             <div className='buttons dark-theme'>
                 <Button>Label</Button>
-                <Button className='button--filled'>Label</Button>
-                <Button className='button--filled'>Label</Button>
+                <Button className='button--view-filled'>Label</Button>
+                <Button className='button--view-filled'>Label</Button>
                 <Button disabled={true}>Label</Button>
             </div>
             <h3>Outlined Buttons</h3>
             <div className='buttons dark-theme'>
                 <Button view='outlined'>Label</Button>
-                <Button view='outlined' className='button--outlined-hover'>
+                <Button view='outlined' className='button--view-outlined-hover'>
                     Label
                 </Button>
-                <Button view='outlined' className='button--outlined-focus'>
+                <Button view='outlined' className='button--view-outlined-focus'>
                     Label
                 </Button>
                 <Button view='outlined' disabled={true}>
@@ -99,10 +99,10 @@ export const ButtonsPage = () => {
             <h3>Text Buttons</h3>
             <div className='buttons dark-theme'>
                 <Button view='text'>Label</Button>
-                <Button view='text' className='button--text-hover'>
+                <Button view='text' className='button--view-text-hover'>
                     Label
                 </Button>
-                <Button view='text' className='button--text-focus'>
+                <Button view='text' className='button--view-text-focus'>
                     Label
                 </Button>
                 <Button view='text' disabled={true}>
@@ -112,10 +112,10 @@ export const ButtonsPage = () => {
             <h3>Elevated Buttons</h3>
             <div className='buttons dark-theme'>
                 <Button view='elevated'>Label</Button>
-                <Button view='elevated' className='button--elevated-hover'>
+                <Button view='elevated' className='button--view-elevated-hover'>
                     Label
                 </Button>
-                <Button view='elevated' className='button--elevated-focus'>
+                <Button view='elevated' className='button--view-elevated-focus'>
                     Label
                 </Button>
                 <Button view='elevated' disabled={true}>
@@ -125,10 +125,10 @@ export const ButtonsPage = () => {
             <h3>Tonal Buttons</h3>
             <div className='buttons dark-theme'>
                 <Button view='tonal'>Label</Button>
-                <Button view='tonal' className='button--tonal-hover'>
+                <Button view='tonal' className='button--view-tonal-hover'>
                     Label
                 </Button>
-                <Button view='tonal' className='button--tonal-focus'>
+                <Button view='tonal' className='button--view-tonal-focus'>
                     Label
                 </Button>
                 <Button view='tonal' disabled={true}>

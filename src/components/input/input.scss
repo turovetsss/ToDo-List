@@ -121,12 +121,6 @@
             background-color: #ffffff;
         }
 
-        .search & {
-            &::placeholder {
-                color: black;
-                text-align: center;
-            }
-        }
         .input--search & {
             &::placeholder {
                 color: black;
@@ -298,16 +292,6 @@
                     content: '!';
                     color: white;
                 }
-            }
-
-            &::before {
-                content: '✖';
-                color: #49454f;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 100%;
             }
         }
 
