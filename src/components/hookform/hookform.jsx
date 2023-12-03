@@ -68,14 +68,14 @@ export const RegistrationForm = () => {
             <div>
                 <label>Имя пользователя:</label>
                 <div>
-                    <input className='' type='text' name='username' value={formData.username} onChange={handleChange} />
+                    <Input className='filled' type='text' name='username' value={formData.username} onChange={handleChange} />
                 </div>
-                <span>{errors.username}</span>
+                {errors.username && <span>{errors.username}</span>}
             </div>
             <div>
                 <label>Адрес электронной почты:</label>
                 <div>
-                    <Input className='' type='email' name='email' value={formData.email} onChange={handleChange} />
+                    <Input type='email' name='email' value={formData.email} onChange={handleChange} />
                 </div>
                 {errors.email && <span>{errors.email}</span>}
             </div>
@@ -86,9 +86,11 @@ export const RegistrationForm = () => {
                 </div>
                 {errors.password && <span>{errors.password}</span>}
             </div>
-            <Button className='button--filled' type='submit'>
-                Sign In
-            </Button>
+            <div>
+                <Button className='button--filled' type='submit'>
+                    Sign In
+                </Button>
+            </div>
         </form>
     );
 };
