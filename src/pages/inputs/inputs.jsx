@@ -48,27 +48,27 @@ export const InputsPage = () => {
             </div>
             <h4>Filled Border input</h4>
             <div className='inputs-container'>
-                <Input view='border search' className='input--border-normal' />
-                <Input view='border search' className='input--border input-focus' />
-                <Input view='border search' className='input--border input-hover' />
-                <Input view='border search' invalid={true} className='input--error' />
-                <Input view='border search' disabled={true} />
+                <Input view='border' className='input--border-normal input--search' />
+                <Input view='border' className='input--border input-focus input--search' />
+                <Input view='border' className='input--border input-hover input--search' />
+                <Input view='border' invalid={true} className='input--error input--search ' />
+                <Input view='border' className='input--search' disabled={true} />
             </div>
             <h4>None Border input</h4>
             <div className='inputs-container'>
-                <Input view='border input--none' className='input--border-normal' />
-                <Input view='border input--none' className='input--border input-focus' />
-                <Input view='border input--none' className='input--border input-hover' />
-                <Input view='border input--none' invalid={true} className='input--error' />
-                <Input view='border input--none' disabled={true} />
+                <Input view='border' className='input--border-normal input--none' />
+                <Input view='border' className='input--border input-focus input--none' />
+                <Input view='border' className='input--border input-hover input--none' />
+                <Input view='border' invalid={true} className='input--error input--none' />
+                <Input view='border' disabled={true} className='input--none' />
             </div>
             <h4>Search Border input</h4>
             <div className='inputs-container'>
-                <Input view='border input--search' className='input--border-normal' />
-                <Input view='border input--search' className='input--border input-focus' />
-                <Input view='border input--search' className='input--border input-hover' />
-                <Input view='border input--search' invalid={true} className='input--error' />
-                <Input view='border input--search' disabled={true} />
+                <Input view='border' className='input--border-normal input--search' />
+                <Input view='border' className='input--border input-focus input--search' />
+                <Input view='border' className='input--border input-hover input--search' />
+                <Input view='border' invalid={true} className='input--error input--search' />
+                <Input view='border' className='input--search' disabled={true} />
             </div>
         </>
     );

@@ -1,14 +1,15 @@
-import React, { useMemo } from 'react';
+import React from 'react';
+import { classname } from 'utils';
 
 import './button.scss';
 
-export const Button = props => {
-    const { children, type = 'button', disabled, view = 'filled', size = 'm' } = props;
+const cn = classname('button');
 
-    const className = useMemo(() => ['button', `button--${view}`, `button--size-${size}`, props.className].join(' '), [props.className]);
+export const Button = props => {
+    const { children, type = 'button', disabled, view = 'filled', size = 'm', className } = props;
 
     return (
-        <button className={className} type={type} disabled={disabled}>
+        <button className={cn({ view, size }, [className])} type={type} disabled={disabled}>
             {children}
         </button>
     );
