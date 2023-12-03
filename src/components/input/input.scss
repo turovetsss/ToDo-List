@@ -146,6 +146,7 @@
             border-bottom: 0.1em solid #49454f;
         }
 
+        // TO DO: ??? зачем это тут
         // Состояние ошибки
         .input--border.input--error &,
         &:invalid:not(:disabled) {
