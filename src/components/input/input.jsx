@@ -2,19 +2,13 @@ import React, { useMemo } from 'react';
 import { classname } from 'utils';
 
 import './input.scss';
+
 const cn = classname('input');
 
 export const Input = props => {
     const { type = 'input', disabled, view = 'filled', invalid, name, value, onChange, hint } = props;
 
-    const className = useMemo(() => {
-        const modifiers = {
-            [view]: view,
-            'input--error': invalid,
-        };
-
-        return cn(null, modifiers, props.className);
-    }, [invalid, props.className, view]);
+    const className = useMemo(() => [cn(), `input--${view}`, invalid ? 'input--error' : '', props.className].join(' '), [invalid, props.className, view]);
 
     return (
         <div className={className}>
