@@ -8,25 +8,27 @@ export const LoginPage = () => {
             <header className='header'>
                 <div className='header__logo'>
                     <img src='логотип.png' alt='Логотип' />
+                    <a href=''>Untlined</a>
                 </div>
                 <nav className='header__menu'>
                     <ul className='menu__list'>
                         <li className='menu__item'>
-                            <a href='#'>Пункт меню 1</a>
+                            <a href='#'>Home</a>
                         </li>
                         <li className='menu__item'>
-                            <a href='#'>Пункт меню 2</a>
+                            <a href='#'>Products</a>
                         </li>
                         <li className='menu__item'>
-                            <a href='#'>Пункт меню 3</a>
+                            <a href='#'>Resources</a>
                         </li>
                         <li className='menu__item'>
-                            <a href='#'>Пункт меню 4</a>
+                            <a href='#'>Pricing</a>
                         </li>
                     </ul>
                 </nav>
                 <div className='header__account'>
-                    <button className='account__button'>Войти</button>
+                    <button className='login__button'>Log in</button>
+                    <button className='signup__button'>Sign up</button>
                 </div>
             </header>
         </>

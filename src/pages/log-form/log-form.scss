@@ -7,7 +7,7 @@
 }
 
 .header__logo img {
-    max-width: 100px;
+    max-width: 60px;
 }
 
 .menu__list {
@@ -18,7 +18,7 @@
 }
 
 .menu__item {
-    margin-right: 20px;
+    margin-right: 32px;
 }
 
 .menu__item:last-child {
@@ -27,15 +27,30 @@
 
 .menu__item a {
     text-decoration: none;
-    color: black;
+    margin-right: 32px;
+    color: var(--gray-500, #667085);
     font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
 }
 
-.account__button {
-    padding: 10px 20px;
-    background-color: #eaeaea;
+.signup__button {
+    padding: 10px 18px;
+    background-color: #7f56d9;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-family: Inter, sans-serif;
+    cursor: pointer;
+}
+.login__button {
+    padding: 10px 18px;
+    background-color: white;
+    color: #667085;
+    border: none;
+    border-radius: 8px;
     font-family: Inter, sans-serif;
     cursor: pointer;
 }
