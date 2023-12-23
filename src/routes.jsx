@@ -1,10 +1,15 @@
 import React from 'react';
-import { ButtonsPage, FormPage, HooksExamples, InputsPage } from 'pages';
+import { ButtonsPage, ButtonsPageV2, FormPage, HooksExamples, InputsPage } from 'pages';
 
 export const ROUTES = [
     {
         path: '/buttons',
         element: <ButtonsPage />,
+        errorElement: <>404</>,
+    },
+    {
+        path: '/buttons-v2',
+        element: <ButtonsPageV2 />,
         errorElement: <>404</>,
     },
     {
