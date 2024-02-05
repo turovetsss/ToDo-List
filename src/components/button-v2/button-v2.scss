@@ -20,37 +20,65 @@
             padding: 8px 14px;
             font-size: 14px;
             height: 36px;
-            width: 106px;
+            width: 126px;
         }
         &-md {
             padding: 10px 16px;
             font-size: 14px;
             height: 40px;
-            width: 110px;
+            width: 130px;
         }
 
         &-lg {
             padding: 10px 18px;
             font-size: 16px;
             height: 44px;
-            width: 125px;
+            width: 145px;
         }
         &-xl {
             padding: 12px 20px;
             font-size: 16px;
             height: 48px;
-            width: 129px;
+            width: 149px;
         }
         &-2xl {
             padding: 16px 28px;
             font-size: 18px;
             height: 60px;
-            width: 156px;
+            width: 166px;
         }
     }
 
     &--view {
         &-s1 {
+            background-color: var(--Brand-600);
+            color: #ffffff;
+
+            &:disabled {
+                background-color: var(--Brand-200);
+                color: var(--White);
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                background-color: #735eab;
+                box-shadow:
+                    0px 0px 0px 4px #f4ebff,
+                    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                background-color: var(--Brand-700);
+                box-shadow: none;
+            }
+        }
+        &-s10 {
+            .icon-start {
+                content: url('./img/circle.png');
+                margin-right: 5px;
+            }
             background-color: var(--Brand-600);
             color: #ffffff;
 
@@ -98,7 +126,68 @@
                 box-shadow: none;
             }
         }
+        &-s11 {
+            .icon-start {
+                content: url('./img/circle11.png');
+                margin-right: 5px;
+            }
+            background-color: var(--Brand-50);
+            color: var(--Brand-700);
+
+            &:disabled {
+                background-color: var(--Brand-25);
+                color: var(--Brand-200);
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                background-color: var(--Brand-50);
+                box-shadow:
+                    0px 0px 0px 4px #f4ebff,
+                    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                background-color: var(--Brand-100);
+                box-shadow: none;
+            }
+        }
         &-s3 {
+            background-color: var(--White);
+            color: var(--Gray-700);
+            border: 1px solid var(--Gray-300);
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            &:disabled {
+                border: 1px solid var(--Gray-200);
+                background: var(--White);
+                box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                color: var(--Gray-300);
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                border: 1px solid var(--Gray-300);
+                background: var(--White);
+                box-shadow:
+                    0px 0px 0px 4px #f2f4f7,
+                    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                border: 1px solid var(--Gray-300);
+                background-color: var(--Gray-50);
+                box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            }
+        }
+        &-s12 {
+            .icon-start {
+                content: url('./img/circle12.png');
+                margin-right: 4px;
+            }
             background-color: var(--White);
             color: var(--Gray-700);
             border: 1px solid var(--Gray-300);
@@ -130,6 +219,7 @@
         &-s4 {
             color: var(--Brand-700);
             background-color: var(--White);
+
             &:disabled {
                 color: var(--Gray-300);
             }
@@ -146,12 +236,62 @@
                 background: var(--Brand-50, #f9f5ff);
             }
         }
+        &-s13 {
+            .icon-start {
+                content: url('./img/circle11.png');
+                margin-right: 4px;
+            }
+            color: var(--Brand-700);
+            background-color: var(--White);
 
+            &:disabled {
+                color: var(--Gray-300);
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                color: var(--Brand-700);
+                background-color: var(--White);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                background: var(--Brand-50, #f9f5ff);
+            }
+        }
         &-s5 {
             color: var(--Gray-500);
             background-color: var(--White);
             &:disabled {
                 color: var(--Gray-300);
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                color: var(--Gray-500);
+                background-color: var(--White);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                background-color: var(--Gray-50, #f9fafb);
+            }
+        }
+        &-s14 {
+            .icon-start {
+                content: url('./img/circle12.png');
+                margin-right: 4px;
+            }
+            color: var(--Gray-500);
+            background-color: var(--White);
+            &:disabled {
+                color: var(--Gray-300);
+                .icon-start {
+                    content: url('./img/circle.png');
+                    margin-right: 4px;
+                }
             }
 
             &-hover:not(-disabled),
