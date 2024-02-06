@@ -1,7 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './log-form.scss';
 export const LoginPage = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [errors, setErrors] = useState({});
+
+    const handleEmailChange = event => {
+        setEmail(event.target.value);
+    };
+
+    const handlePasswordChange = event => {
+        setPassword(event.target.value);
+    };
+
+    const validateForm = () => {
+        let valid = true;
+        let newErrors = {};
+
+        if (email === '' || password === '') {
+            newErrors.new = 'Incorrect login or password';
+            valid = false;
+        }
+
+        setErrors(newErrors);
+
+        return valid;
+    };
+
+    const handleSubmit = event => {
+        event.preventDefault();
+
+        if (validateForm()) {
+            console.log('Email:', email);
+            console.log('Password:', password);
+        }
+    };
+
     return (
         <div>
             <div className='header'>
@@ -31,7 +66,7 @@ export const LoginPage = () => {
                     <button className='signup__button'>Sign up</button>
                 </div>
             </div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className='box'>
                     <div className='box-signup'>
                         <img src={require('./img/logformimg.JPG')} height={48} />
@@ -40,15 +75,23 @@ export const LoginPage = () => {
                     <p>Welcome back! Please enter your details.</p>
                     <div className='text-box'>
                         <label>Email</label>
-                        <input type='email' className='email' placeholder='Enter your email' />
+                        <input
+                            value={email}
+                            onChange={handleEmailChange}
+                            className={errors.new ? 'error' : 'email'}
+                            type='email'
+                            placeholder='Enter your email'
+                        />
                     </div>
                     <div className='text-box'>
                         <label>Password</label>
-                        <input type='password' className='email' />
+                        <input type='password' value={password} onChange={handlePasswordChange} className={errors.new ? 'error' : 'email'} />
                     </div>
+                    {errors.new && <div className='error-message'>{errors.new}</div>}
+
                     <div className='check-box'>
                         <div>
-                            <input type='checkbox' id='scales' name='scales' checked={false} />
+                            <input type='checkbox' id='scales' name='scales' checked={true} />
                             <label htmlFor='scales'>Remember for 30 days</label>
                         </div>
                         <div className='rem'>
@@ -56,7 +99,7 @@ export const LoginPage = () => {
                         </div>
                     </div>
 
-                    <div className='sign-btn'>Sign In</div>
+                    <button className='sign-btn'>Sign In</button>
 
                     <div className='google-btn'>
                         <img src={require('./img/soc.jpg')} height={24} />
