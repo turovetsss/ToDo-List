@@ -3,3 +3,4 @@ export * from './inputs';
 export * from './forms';
 export * from './hooks-examples';
 export * from './log-form';
+export * from './log-form-hook';
