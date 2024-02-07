@@ -1,23 +1,41 @@
+/* eslint-disable import/no-useless-path-segments */
 import React, { useState } from 'react';
 
-import './log-form-hook.scss';
-export const LoginPageHook = () => {
-    const [form, setForm] = useState({
-        email: '',
-        password: '',
-    });
-    const onUpdateField = e => {
-        const nextFormState = {
-            ...form,
-            [e.target.name]: e.target.value,
-        };
+import './log-form.scss';
+export const LoginPage = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [errors, setErrors] = useState({});
 
-        setForm(nextFormState);
+    const handleEmailChange = event => {
+        setEmail(event.target.value);
     };
 
-    const onSubmitForm = e => {
-        e.preventDefault();
-        alert(JSON.stringify(form, null, 2));
+    const handlePasswordChange = event => {
+        setPassword(event.target.value);
+    };
+
+    const validateForm = () => {
+        let valid = true;
+        let newErrors = {};
+
+        if (email === '' || password === '') {
+            newErrors.new = 'Incorrect login or password';
+            valid = false;
+        }
+
+        setErrors(newErrors);
+
+        return valid;
+    };
+
+    const handleSubmit = event => {
+        event.preventDefault();
+
+        if (validateForm()) {
+            console.log('Email:', email);
+            console.log('Password:', password);
+        }
     };
 
     return (
@@ -49,7 +67,7 @@ export const LoginPageHook = () => {
                     <button className='signup__button'>Sign up</button>
                 </div>
             </div>
-            <form onSubmit={onSubmitForm}>
+            <form onSubmit={handleSubmit}>
                 <div className='box'>
                     <div className='box-signup'>
                         <img src={require('./img/logformimg.JPG')} height={48} />
@@ -58,12 +76,19 @@ export const LoginPageHook = () => {
                     <p>Welcome back! Please enter your details.</p>
                     <div className='text-box'>
                         <label>Email</label>
-                        <input type='text' aria-label='Email field' name='email' value={form.email} onChange={onUpdateField} />
+                        <input
+                            value={email}
+                            onChange={handleEmailChange}
+                            className={errors.new ? 'error' : 'email'}
+                            type='email'
+                            placeholder='Enter your email'
+                        />
                     </div>
                     <div className='text-box'>
                         <label>Password</label>
-                        <input type='password' aria-label='Password field' name='password' value={form.password} onChange={onUpdateField} />
+                        <input type='password' value={password} onChange={handlePasswordChange} className={errors.new ? 'error' : 'email'} />
                     </div>
+                    {errors.new && <div className='error-message'>{errors.new}</div>}
 
                     <div className='check-box'>
                         <div>

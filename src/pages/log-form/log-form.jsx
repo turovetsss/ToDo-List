@@ -18,7 +18,7 @@ export const LoginPage = () => {
         let valid = true;
         let newErrors = {};
 
-        if (email === '' || password === '') {
+        if (!email || !password) {
             newErrors.new = 'Incorrect login or password';
             valid = false;
         }
@@ -79,7 +79,7 @@ export const LoginPage = () => {
                             value={email}
                             onChange={handleEmailChange}
                             className={errors.new ? 'error' : 'email'}
-                            type='email'
+                            type='text'
                             placeholder='Enter your email'
                         />
                     </div>
