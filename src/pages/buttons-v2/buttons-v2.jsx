@@ -15,7 +15,7 @@ export const ButtonsPageV2 = () => {
                 <ButtonV2 view='s1' className='buttonv2--view-s1-focus'>
                     Button CTA
                 </ButtonV2>
-                <ButtonV2 view='s1' disabled={true}>
+                <ButtonV2 view='s1-disabled' disabled={true}>
                     Button CTA
                 </ButtonV2>
             </div>
@@ -57,7 +57,7 @@ export const ButtonsPageV2 = () => {
                 <ButtonV2 view='s2' size='sm' className='buttonv2--view-s2-hover'>
                     Button CTA
                 </ButtonV2>
-                <ButtonV2 view='s2' size='sm' disabled={true}>
+                <ButtonV2 view='s2-disabled ' size='sm' disabled={true}>
                     Button CTA
                 </ButtonV2>
             </div>
@@ -226,6 +226,160 @@ export const ButtonsPageV2 = () => {
                     Button CTA
                 </ButtonV2>
                 <ButtonV2 view='s14' size='sm' disabled={true}>
+                    Button CTA
+                </ButtonV2>
+            </div>
+            <div className='buttons'>
+                <ButtonV2 view='s15' size='sm'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s15' size='sm' className='buttonv2--view-s15-focus'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s15' size='sm' className='buttonv2--view-s15-hover'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s15-disabled' size='sm' disabled={true}>
+                    Button CTA
+                </ButtonV2>
+            </div>
+            <div className='buttons'>
+                <ButtonV2 view='s16' size='sm'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s16' size='sm' className='buttonv2--view-s16-focus'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s16' size='sm' className='buttonv2--view-s16-hover'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s16-disabled' size='sm' disabled={true}>
+                    Button CTA
+                </ButtonV2>
+            </div>
+            <div className='buttons'>
+                <ButtonV2 view='s17' size='sm'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s17' size='sm' className='buttonv2--view-s17-focus'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s17' size='sm' className='buttonv2--view-s17-hover'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s17-disabled' size='sm' disabled={true}>
+                    Button CTA
+                </ButtonV2>
+            </div>
+            <div className='buttons'>
+                <ButtonV2 view='s18' size='sm'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s18' size='sm' className='buttonv2--view-s18-focus'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s18' size='sm' className='buttonv2--view-s18-hover'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s18-disabled' size='sm' disabled={true}>
+                    Button CTA
+                </ButtonV2>
+            </div>
+            <div className='buttons'>
+                <ButtonV2 view='s19' size='sm'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s19' size='sm' className='buttonv2--view-s19-focus'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s19' size='sm' className='buttonv2--view-s19-hover'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s19-disabled' size='sm' disabled={true}>
+                    Button CTA
+                </ButtonV2>
+            </div>
+            <div className='buttons'>
+                <ButtonV2 view='s20' size='sm'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s20' size='sm' className='buttonv2--view-s20-focus'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s20' size='sm' className='buttonv2--view-s20-hover'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s20-disabled' size='sm' disabled={true}>
+                    Button CTA
+                </ButtonV2>
+            </div>
+            <div className='buttons'>
+                <ButtonV2 view='s21' size='sm'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s21' size='sm' className='buttonv2--view-s21-focus'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s21' size='sm' className='buttonv2--view-s21-hover'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s21-disabled' size='sm' disabled={true}>
+                    Button CTA
+                </ButtonV2>
+            </div>
+            <div className='buttons'>
+                <ButtonV2 view='s22' size='sm'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s22' size='sm' className='buttonv2--view-s22-focus'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s22' size='sm' className='buttonv2--view-s22-hover'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s22-disabled' size='sm' disabled={true}>
+                    Button CTA
+                </ButtonV2>
+            </div>
+            <div className='buttons'>
+                <ButtonV2 view='s23' size='sm'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s23' size='sm' className='buttonv2--view-s23-focus'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s23' size='sm' className='buttonv2--view-s23-hover'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s23-disabled' size='sm' disabled={true}>
+                    Button CTA
+                </ButtonV2>
+            </div>
+            <div className='buttons'>
+                <ButtonV2 view='s24' size='sm'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s24' size='sm' className='buttonv2--view-s24-focus'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s24' size='sm' className='buttonv2--view-s24-hover'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s24-disabled' size='sm' disabled={true}>
+                    Button CTA
+                </ButtonV2>
+            </div>
+            <div className='buttons'>
+                <ButtonV2 view='s25' size='sm'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s25' size='sm' className='buttonv2--view-s25-focus'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s25' size='sm' className='buttonv2--view-s25-hover'>
+                    Button CTA
+                </ButtonV2>
+                <ButtonV2 view='s25-disabled' size='sm' disabled={true}>
                     Button CTA
                 </ButtonV2>
             </div>

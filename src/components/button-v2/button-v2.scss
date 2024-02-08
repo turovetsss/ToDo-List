@@ -16,30 +16,35 @@
     box-sizing: border-box;
 
     &--size {
+        &-none {
+            font-size: 14px;
+            height: 36px;
+            width: 36px;
+        }
         &-sm {
             padding: 8px 14px;
             font-size: 14px;
             height: 36px;
-            width: 126px;
+            width: 148px;
         }
         &-md {
             padding: 10px 16px;
             font-size: 14px;
             height: 40px;
-            width: 130px;
+            width: 156px;
         }
 
         &-lg {
             padding: 10px 18px;
             font-size: 16px;
             height: 44px;
-            width: 145px;
+            width: 166px;
         }
         &-xl {
             padding: 12px 20px;
             font-size: 16px;
             height: 48px;
-            width: 149px;
+            width: 176px;
         }
         &-2xl {
             padding: 16px 28px;
@@ -51,6 +56,30 @@
 
     &--view {
         &-s1 {
+            background-color: var(--Brand-600);
+            color: #ffffff;
+
+            &-disabled {
+                background-color: var(--Brand-200);
+                color: var(--White);
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                background-color: #735eab;
+                box-shadow:
+                    0px 0px 0px 4px #f4ebff,
+                    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                background-color: var(--Brand-700);
+                box-shadow: none;
+            }
+        }
+        &-s10 {
             background-color: var(--Brand-600);
             color: #ffffff;
 
@@ -74,17 +103,28 @@
                 box-shadow: none;
             }
         }
-        &-s10 {
-            .icon-start {
-                content: url('./img/circle.png');
-                margin-right: 5px;
-            }
+        &-s24 {
             background-color: var(--Brand-600);
             color: #ffffff;
-
-            &:disabled {
+            .icon-end {
+                margin-left: 5px;
+                margin-top: 5px;
+                .circle-end {
+                    fill: transparent;
+                    stroke: white;
+                }
+            }
+            &-disabled {
                 background-color: var(--Brand-200);
                 color: var(--White);
+                .icon-end {
+                    margin-left: 5px;
+                    margin-top: 5px;
+                    .circle-end {
+                        fill: transparent;
+                        stroke: white;
+                    }
+                }
             }
 
             &-hover:not(-disabled),
@@ -106,7 +146,7 @@
             background-color: var(--Brand-50);
             color: var(--Brand-700);
 
-            &:disabled {
+            &-disabled {
                 background-color: var(--Brand-25);
                 color: var(--Brand-300);
             }
@@ -126,11 +166,46 @@
                 box-shadow: none;
             }
         }
-        &-s11 {
+        &-s16 {
+            background-color: var(--Brand-50);
+            color: var(--Brand-700);
             .icon-start {
-                content: url('./img/circle11.png');
                 margin-right: 5px;
+                margin-top: 5px;
+                .circle-start {
+                    fill: transparent;
+                    stroke: var(--Brand-700);
+                }
             }
+            &-disabled {
+                background-color: var(--Brand-25);
+                color: var(--Brand-300);
+                .icon-start {
+                    margin-right: 5px;
+                    margin-top: 2px;
+                    .circle-start {
+                        fill: transparent;
+                        stroke: var(--Brand-300);
+                    }
+                }
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                background-color: var(--Brand-50);
+                box-shadow:
+                    0px 0px 0px 4px #f4ebff,
+                    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                background-color: var(--Brand-100);
+                box-shadow: none;
+            }
+        }
+        &-s11 {
             background-color: var(--Brand-50);
             color: var(--Brand-700);
 
@@ -183,11 +258,52 @@
                 box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
             }
         }
-        &-s12 {
+        &-s17 {
+            background-color: var(--White);
+            color: var(--Gray-700);
             .icon-start {
-                content: url('./img/circle12.png');
-                margin-right: 4px;
+                margin-right: 5px;
+                margin-top: 2px;
+                .circle-start {
+                    fill: transparent;
+                    stroke: var(--Gray-700);
+                }
             }
+            border: 1px solid var(--Gray-300);
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            &-disabled {
+                border: 1px solid var(--Gray-200);
+                background: var(--White);
+                box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                color: var(--Gray-300);
+                .icon-start {
+                    margin-right: 5px;
+                    margin-top: 2px;
+                    .circle-start {
+                        fill: transparent;
+                        stroke: var(--Gray-300);
+                    }
+                }
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                border: 1px solid var(--Gray-300);
+                background: var(--White);
+                box-shadow:
+                    0px 0px 0px 4px #f2f4f7,
+                    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                border: 1px solid var(--Gray-300);
+                background-color: var(--Gray-50);
+                box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            }
+        }
+        &-s12 {
             background-color: var(--White);
             color: var(--Gray-700);
             border: 1px solid var(--Gray-300);
@@ -237,15 +353,46 @@
             }
         }
         &-s13 {
-            .icon-start {
-                content: url('./img/circle11.png');
-                margin-right: 4px;
-            }
             color: var(--Brand-700);
             background-color: var(--White);
 
             &:disabled {
                 color: var(--Gray-300);
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                color: var(--Brand-700);
+                background-color: var(--White);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                background: var(--Brand-50, #f9f5ff);
+            }
+        }
+        &-s18 {
+            color: var(--Brand-700);
+            background-color: var(--White);
+            .icon-start {
+                margin-right: 5px;
+                margin-top: 2px;
+                .circle-start {
+                    fill: transparent;
+                    stroke: var(--Brand-700);
+                }
+            }
+            &-disabled {
+                color: var(--Gray-300);
+                .icon-start {
+                    margin-right: 5px;
+                    margin-top: 2px;
+                    .circle-start {
+                        fill: transparent;
+                        stroke: var(--Grey-300);
+                    }
+                }
             }
 
             &-hover:not(-disabled),
@@ -279,19 +426,46 @@
                 background-color: var(--Gray-50, #f9fafb);
             }
         }
-        &-s14 {
+        &-s19 {
+            color: var(--Gray-500);
+            background-color: var(--White);
             .icon-start {
-                content: url('./img/circle12.png');
-                margin-right: 4px;
+                margin-right: 5px;
+                margin-top: 2px;
+                .circle-start {
+                    fill: transparent;
+                    stroke: var(--Gray-500);
+                }
             }
+            &-disabled {
+                color: var(--Gray-300);
+                .icon-start {
+                    margin-right: 5px;
+                    margin-top: 2px;
+                    .circle-start {
+                        fill: transparent;
+                        stroke: var(--Gray-300);
+                    }
+                }
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                color: var(--Gray-500);
+                background-color: var(--White);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                background-color: var(--Gray-50, #f9fafb);
+            }
+        }
+        &-s14 {
             color: var(--Gray-500);
             background-color: var(--White);
             &:disabled {
                 color: var(--Gray-300);
-                .icon-start {
-                    content: url('./img/circle.png');
-                    margin-right: 4px;
-                }
             }
 
             &-hover:not(-disabled),
@@ -329,12 +503,92 @@
                 color: var(--White);
             }
         }
+        &-s20 {
+            color: var(--White);
+            background-color: var(--Error-600);
+            .icon-start {
+                margin-right: 5px;
+                margin-top: 2px;
+                .circle-start {
+                    fill: transparent;
+                    stroke: white;
+                }
+            }
+            &-disabled {
+                background-color: var(--Error-200);
+                color: var(--White);
+                .icon-start {
+                    margin-right: 5px;
+                    margin-top: 2px;
+                    .circle-start {
+                        fill: transparent;
+                        stroke: white;
+                    }
+                }
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                color: var(--White);
+                background-color: var(--Error-600, #d92d20);
+                box-shadow:
+                    0px 0px 0px 4px #fee4e2,
+                    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                background-color: var(--Error-700);
+                color: var(--White);
+            }
+        }
         &-s7 {
             color: var(--Error-600);
             background-color: var(--Error-50);
             &:disabled {
                 background-color: var(--Error-25);
                 color: var(--Error-300);
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                border: 1px solid var(--Error-50);
+                background-color: var(--Error-50);
+                box-shadow:
+                    0px 0px 0px 4px #fee4e2,
+                    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                background-color: var(--Error-100);
+                color: var(--Error-600);
+            }
+        }
+        &-s21 {
+            color: var(--Error-600);
+            background-color: var(--Error-50);
+            .icon-start {
+                margin-right: 5px;
+                margin-top: 2px;
+                .circle-start {
+                    fill: transparent;
+                    stroke: var(--Error-600);
+                }
+            }
+            &-disabled {
+                background-color: var(--Error-25);
+                color: var(--Error-300);
+                .icon-start {
+                    margin-right: 5px;
+                    margin-top: 2px;
+                    .circle-start {
+                        fill: transparent;
+                        stroke: var(--Error-300);
+                    }
+                }
             }
 
             &-hover:not(-disabled),
@@ -380,6 +634,49 @@
                 color: var(--Error-700);
             }
         }
+        &-s22 {
+            border: 1px solid var(--Error-300);
+            background-color: var(--White);
+            color: var(--Error-700);
+            .icon-start {
+                margin-right: 5px;
+                margin-top: 2px;
+                .circle-start {
+                    fill: transparent;
+                    stroke: var(--Error-700);
+                }
+            }
+            &-disabled {
+                color: var(--Error-300);
+                border: 1px solid var(--Error-200);
+                background: var(--White);
+                box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                .icon-start {
+                    margin-right: 5px;
+                    margin-top: 2px;
+                    .circle-start {
+                        fill: transparent;
+                        stroke: var(--Error-300);
+                    }
+                }
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                border: 1px solid var(--Error-300);
+                background-color: var(--White);
+                box-shadow:
+                    0px 0px 0px 4px #fee4e2,
+                    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                background-color: var(--Error-50);
+                color: var(--Error-700);
+            }
+        }
         &-s9 {
             background-color: var(--White);
             color: var(--Error-700);
@@ -399,6 +696,83 @@
             &:focus:not(:disabled) {
                 background-color: var(--Error-50);
                 color: var(--Error-700);
+            }
+        }
+        &-s23 {
+            background-color: var(--White);
+            color: var(--Error-700);
+            .icon-start {
+                margin-right: 5px;
+                margin-top: 2px;
+                .circle-start {
+                    fill: transparent;
+                    stroke: var(--Error-700);
+                }
+            }
+
+            &-disabled {
+                color: var(--Error-300);
+                background: var(--White);
+                box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                .icon-start {
+                    margin-right: 5px;
+                    margin-top: 2px;
+                    .circle-start {
+                        fill: transparent;
+                        stroke: var(--Error-300);
+                    }
+                }
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                background-color: var(--White);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                background-color: var(--Error-50);
+                color: var(--Error-700);
+            }
+        }
+        &-s15 {
+            background-color: var(--Brand-600);
+            color: #ffffff;
+            .icon-start {
+                margin-right: 5px;
+                margin-top: 5px;
+                .circle-start {
+                    fill: transparent;
+                    stroke: white;
+                }
+            }
+            &-disabled {
+                background-color: var(--Brand-200);
+                color: var(--White);
+                .icon-start {
+                    margin-right: 5px;
+                    margin-top: 5px;
+                    .circle-start {
+                        fill: transparent;
+                        stroke: white;
+                    }
+                }
+            }
+
+            &-hover:not(-disabled),
+            &:hover:not(:disabled) {
+                background-color: #735eab;
+                box-shadow:
+                    0px 0px 0px 4px #f4ebff,
+                    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                cursor: pointer;
+            }
+
+            &-focus:not(-disabled),
+            &:focus:not(:disabled) {
+                background-color: var(--Brand-700);
+                box-shadow: none;
             }
         }
         &-outlined {
@@ -425,133 +799,45 @@
                 border: 1px solid #8875b8;
             }
         }
-
-        &-text {
-            background-color: #fef7ff;
-            color: var(--primary-color);
-
-            .dark-theme & {
-                background-color: #141218;
-                color: #d0bcff;
+        &-s25 {
+            background-color: var(--Brand-600);
+            color: #ffffff;
+            .icon-start {
+                margin-right: 5px;
+                margin-top: 5px;
+                .circle-start {
+                    r: 3;
+                    fill: white;
+                    stroke: white;
+                }
+            }
+            &-disabled {
+                background-color: var(--Brand-200);
+                color: var(--White);
+                .icon-start {
+                    margin-right: 5px;
+                    margin-top: 5px;
+                    .circle-start {
+                        r: 3;
+                        fill: white;
+                        stroke: white;
+                    }
+                }
             }
 
             &-hover:not(-disabled),
             &:hover:not(:disabled) {
-                background-color: #f2eaf8;
+                background-color: #735eab;
+                box-shadow:
+                    0px 0px 0px 4px #f4ebff,
+                    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
                 cursor: pointer;
-                .dark-theme & {
-                    background-color: #23202a;
-                    color: #d0bcff;
-                }
             }
 
             &-focus:not(-disabled),
             &:focus:not(:disabled) {
-                background-color: #ebe3f4;
-                .dark-theme & {
-                    background-color: #2b2734;
-                    color: #d0bcff;
-                }
-            }
-
-            &:disabled {
-                background-color: #fef7ff;
-                color: #a8a3aa;
-
-                .dark-theme & {
-                    background-color: #141218;
-                    color: #636068;
-                }
-            }
-        }
-
-        &-elevated {
-            background-color: #f7f2fa;
-            color: var(--primary-color);
-            box-shadow:
-                0px 1px 3px 1px rgba(0, 0, 0, 0.15),
-                0px 1px 2px 0px rgba(0, 0, 0, 0.3);
-
-            .dark-theme & {
-                background-color: #1d1b20;
-                color: #d0bcff;
-            }
-
-            &-hover:not(-disabled),
-            &:hover:not(:disabled) {
-                background-color: #ebe5f3;
-                cursor: pointer;
-                box-shadow:
-                    0px 1px 3px 1px rgba(0, 0, 0, 0.15),
-                    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
-
-                .dark-theme & {
-                    background-color: #2b2832;
-                    color: #d0bcff;
-                }
-            }
-
-            &-focus:not(-disabled),
-            &:focus:not(:disabled) {
-                background-color: #e6dff0;
-                box-shadow:
-                    0px 1px 3px 1px rgba(0, 0, 0, 0.15),
-                    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
-
-                .dark-theme & {
-                    background-color: #322e3b;
-                    color: #d0bcff;
-                }
-            }
-
-            &:disabled {
-                background-color: #e2dce4;
-                color: #97939a;
-
-                .dark-theme & {
-                    background-color: #2e2b31;
-                    color: #747077;
-                }
-            }
-        }
-
-        &-tonal {
-            background-color: #e8def8;
-            color: #1d192b;
-
-            .dark-theme & {
-                background-color: #4a4458;
-                color: #e8def8;
-            }
-
-            &-hover:not(-disabled),
-            &:hover:not(:disabled) {
-                background-color: #d8cee8;
-                cursor: pointer;
-                box-shadow:
-                    0px 1px 3px 1px rgba(0, 0, 0, 0.15),
-                    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
-
-                .dark-theme & {
-                    background-color: #575065;
-                    color: #e8def8;
-                    cursor: pointer;
-                }
-            }
-
-            &-focus:not(-disabled),
-            &:focus:not(:disabled) {
-                background-color: #d0c6df;
-            }
-
-            &:disabled {
-                background-color: #e2dce4;
-                color: #9b979e;
-
-                .dark-theme & {
-                    background-color: #2e2b31;
-                    color: #6f6b72;
-                }
+                background-color: var(--Brand-700);
+                box-shadow: none;
             }
         }
     }
