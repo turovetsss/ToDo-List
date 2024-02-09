@@ -76,16 +76,17 @@ export const LoginPage = () => {
                     <div className='text-box'>
                         <label>Email</label>
                         <input
+                            type='email'
+                            pattern='[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}'
                             value={email}
                             onChange={handleEmailChange}
                             className={errors.new ? 'error' : 'email'}
-                            type='text'
                             placeholder='Enter your email'
                         />
                     </div>
                     <div className='text-box'>
                         <label>Password</label>
-                        <input type='password' value={password} onChange={handlePasswordChange} className={errors.new ? 'error' : 'email'} />
+                        <input type='password' minLength='8' value={password} onChange={handlePasswordChange} className={errors.new ? 'error' : 'email'} />
                     </div>
                     {errors.new && <div className='error-message'>{errors.new}</div>}
 
