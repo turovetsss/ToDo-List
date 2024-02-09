@@ -1,23 +1,12 @@
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 import './log-form-hook.scss';
 export const LoginPageHook = () => {
-    const [form, setForm] = useState({
-        email: '',
-        password: '',
-    });
-    const onUpdateField = e => {
-        const nextFormState = {
-            ...form,
-            [e.target.name]: e.target.value,
-        };
+    const { register, handleSubmit, errors } = useForm();
 
-        setForm(nextFormState);
-    };
-
-    const onSubmitForm = e => {
-        e.preventDefault();
-        alert(JSON.stringify(form, null, 2));
+    const onSubmit = data => {
+        console.log(data);
     };
 
     return (
@@ -49,7 +38,7 @@ export const LoginPageHook = () => {
                     <button className='signup__button'>Sign up</button>
                 </div>
             </div>
-            <form onSubmit={onSubmitForm}>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='box'>
                     <div className='box-signup'>
                         <img src={require('./img/logformimg.JPG')} height={48} />
@@ -58,11 +47,22 @@ export const LoginPageHook = () => {
                     <p>Welcome back! Please enter your details.</p>
                     <div className='text-box'>
                         <label>Email</label>
-                        <input type='text' aria-label='Email field' name='email' value={form.email} onChange={onUpdateField} />
+                        <input
+                            name='email'
+                            ref={register({
+                                required: 'Email is required',
+                                pattern: {
+                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                    message: 'Invalid email address',
+                                },
+                            })}
+                        />
+                        {errors.email && <span className='error'>{errors.email.message}</span>}
                     </div>
                     <div className='text-box'>
                         <label>Password</label>
-                        <input type='password' aria-label='Password field' name='password' value={form.password} onChange={onUpdateField} />
+                        <input name='password' type='password' ref={register({ required: 'Password is required' })} />
+                        {errors.password && <span className='error'>{errors.password.message}</span>}
                     </div>
 
                     <div className='check-box'>
