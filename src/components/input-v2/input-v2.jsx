@@ -3,7 +3,7 @@ import { classname } from 'utils';
 
 import './input-v2.scss';
 
-const cn = classname('input');
+const cn = classname('input-v2');
 
 export const InputV2 = props => {
     const { type = 'input', disabled, view = 'filled', invalid, name, value, onChange, hint } = props;
@@ -14,7 +14,15 @@ export const InputV2 = props => {
         <div className={className}>
             <label className={cn('label')}>Label</label>
             <div className={cn('left-addons')}></div>
-            <input className={cn('control')} type={type} disabled={disabled} placeholder='Placeholder' name={name} value={value} onChange={onChange} />
+            <input
+                className={cn('control')}
+                type={type}
+                disabled={disabled}
+                placeholder='olivia@untitledui.com'
+                name={name}
+                value={value}
+                onChange={onChange}
+            />
             <div className={cn('right-addons')}></div>
             {hint && <span className={cn('hint')}>{hint}</span>}
         </div>
