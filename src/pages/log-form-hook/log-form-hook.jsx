@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 
 import './log-form-hook.scss';
@@ -49,7 +49,7 @@ export const LoginPageHook = () => {
                         <label>Email</label>
                         <input
                             name='email'
-                            ref={register({
+                            {...register({
                                 required: 'Email is required',
                                 pattern: {
                                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -61,10 +61,9 @@ export const LoginPageHook = () => {
                     </div>
                     <div className='text-box'>
                         <label>Password</label>
-                        <input name='password' type='password' ref={register({ required: 'Password is required' })} />
+                        <input name='password' type='password' {...register('message', { required: 'Required' })} />
                         {errors.password && <span className='error'>{errors.password.message}</span>}
                     </div>
-
                     <div className='check-box'>
                         <div>
                             <input type='checkbox' id='scales' name='scales' checked={true} />
@@ -74,9 +73,7 @@ export const LoginPageHook = () => {
                             <a className='a-name'>Forgot password</a>
                         </div>
                     </div>
-
                     <button className='sign-btn'>Sign In</button>
-
                     <div className='google-btn'>
                         <img src={require('./img/soc.jpg')} height={24} />
                         Sign in with Google

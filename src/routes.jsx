@@ -7,6 +7,7 @@ export const ROUTES = [
         element: <ButtonsPage />,
         errorElement: <>404</>,
     },
+
     {
         path: '/inputs',
         element: <InputsPage />,
@@ -28,7 +29,7 @@ export const ROUTES = [
         errorElement: <>404</>,
     },
     {
-        path: '/login-page-hook',
+        path: '/login-hook',
         element: <LoginPageHook />,
         errorElement: <>404</>,
     },
