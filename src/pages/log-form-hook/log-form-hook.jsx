@@ -1,26 +1,16 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
 import './log-form-hook.scss';
 export const LoginPageHook = () => {
     const {
+        reset,
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
-
     const onSubmit = data => {
-        const userData = JSON.parse(localStorage.getItem(data.email));
-
-        if (userData) {
-            if (userData.password === data.password) {
-                console.log(userData.name + ' You Are Successfully Logged In');
-            } else {
-                console.log('Email or Password is not matching with our record');
-            }
-        } else {
-            console.log('Email or Password is not matching with our record');
-        }
+        console.log(data);
     };
 
     return (
@@ -61,13 +51,21 @@ export const LoginPageHook = () => {
                     <p>Welcome back! Please enter your details.</p>
                     <div className='text-box'>
                         <label>Email</label>
-                        <input type='email' {...register('email', { required: true })} />
-                        {errors.email && <span style={{ color: 'red' }}>{errors.email.message}</span>}
+                        <input
+                            type='email'
+                            className={`form-control ${errors.email ? 'error' : 'email'}`}
+                            {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
+                        />
+                        {errors.email && <span className='error-message'>Пожалуйста, введите корректный email.</span>}
                     </div>
                     <div className='text-box'>
                         <label>Password</label>
-                        <input type='password' {...register('password')} />
-                        {errors.password && <span className='error'>{errors.password.message}</span>}
+                        <input
+                            type='password'
+                            className={`form-control ${errors.password ? 'error' : 'email'}`}
+                            {...register('password', { required: true, pattern: /(?=.{8,})(?=.*[a-zA-Z])/ })}
+                        />
+                        {errors.password && <span className='error-message'>Введите корректный пароль</span>}
                     </div>
                     <div className='check-box'>
                         <div>
@@ -78,7 +76,9 @@ export const LoginPageHook = () => {
                             <a className='a-name'>Forgot password</a>
                         </div>
                     </div>
-                    <button className='sign-btn'>Sign In</button>
+                    <button className='sign-btn' onClick={() => reset()}>
+                        Sign In
+                    </button>
                     <div className='google-btn'>
                         <img src={require('./img/soc.jpg')} height={24} />
                         Sign in with Google
