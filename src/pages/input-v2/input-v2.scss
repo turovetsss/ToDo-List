@@ -1,0 +1,9 @@
+.inputs-container {
+    padding: 20px;
+
+    & > * {
+        margin-right: 16px;
+        max-width: 1200px;
+        display: inline-block;
+    }
+}

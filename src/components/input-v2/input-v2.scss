@@ -1,17 +1,10 @@
-.input {
+.input-v2 {
     position: relative;
 
     &__label {
-        position: absolute;
-        top: 4px;
-        left: 16px;
-        font-family: Roboto, sans-serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 16px;
-        color: #49454f;
-
+        position: static;
+        top: -9px;
+        padding: 3px;
         .input--focus &,
         &:focus:not(:disabled) {
             color: #6750a4;
@@ -30,7 +23,7 @@
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
-            line-height: 16px;
+            line-height: 20px;
             color: #49454f;
         }
     }
@@ -38,14 +31,14 @@
         &__border {
             border: 1px solid #49454f;
             outline: none;
-            border-radius: 0.3em;
+            border-radius: 8px;
             color: #000000;
             background-color: #ffffff;
-            height: 50px;
+            height: 44px;
             box-sizing: border-box;
             padding: 24px 0 8px 16px;
             font-family: Roboto, sans-serif;
-            font-size: 16px;
+            font-size: 14px;
             font-style: normal;
             font-weight: 400;
             line-height: 24px;
@@ -60,23 +53,25 @@
         }
     }
     &__control {
-        border: none;
-        outline: none;
-        border-radius: 0.2em 0.2em 0 0;
-        color: #000000;
-        background-color: #e6e0e9;
-        border-bottom: 1px solid #49454f;
-        height: 50px;
-        box-sizing: border-box;
-        padding: 24px 0 8px 16px;
-        font-family: Roboto, sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0.5px;
-        width: 100%;
+        position: static;
+        width: 250px;
+        height: 44px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 14px 10px 14px;
+        flex: none;
+        order: 0;
 
+        align-self: stretch;
+        flex-grow: 0;
+        margin: 6px 0px;
+        box-sizing: border-box;
+        border: 1px solid rgb(208, 213, 221);
+        border-radius: 8px;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        background: rgb(255, 255, 255);
         .input--border & {
             border: 1px solid #49454f;
             outline: none;
@@ -102,6 +97,7 @@
             &:hover:not(:disabled) {
                 border: 1px solid #49454f;
                 background-color: #ffffff;
+                color: #000000;
             }
             &:disabled {
                 background-color: #ffffff;
@@ -120,7 +116,7 @@
         }
         .input--border.input-hover & {
             border: 1px solid #49454f;
-            background-color: #ffffff;
+            color: #ebe1e1;
         }
 
         .input--search & {
@@ -132,33 +128,28 @@
 
         &:disabled {
             background-color: #f5eef6;
-            border-bottom: 0.1em solid #a39ea5;
+            border: 0.1em solid #a39ea5;
         }
         .input--focus &,
         &:focus:not(:disabled) {
-            background-color: #e6e0e9;
-            border-bottom: 0.2em solid #6750a4;
-            color: #6750a4;
+            box-sizing: border-box;
+            border: 4px solid #f4ebff;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255);
         }
 
         // Состояние при наведении
         .input--hover &,
         &:hover:not(:disabled) {
-            background-color: #d6d0d9;
-            border-bottom: 0.1em solid #49454f;
+            border: 1px solid #49454f;
+            background-color: #ffffff;
+            color: #000000;
         }
 
-        // TO DO: ??? зачем это тут
-        // Состояние ошибки
-        .input--border.input--error &,
-        &:invalid:not(:disabled) {
-            background-color: #ffffff;
-            border: 0.2em solid #b3261e;
-        }
         .input--error &,
         &:invalid:not(:disabled) {
             background-color: #e6e0e9;
-            border-bottom: 0.2em solid #b3261e;
+            border: 0.02em solid #b3261e;
         }
     }
 
