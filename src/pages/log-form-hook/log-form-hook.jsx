@@ -11,6 +11,7 @@ export const LoginPageHook = () => {
     } = useForm();
     const onSubmit = data => {
         console.log(data);
+        reset();
     };
 
     return (
@@ -76,9 +77,7 @@ export const LoginPageHook = () => {
                             <a className='a-name'>Forgot password</a>
                         </div>
                     </div>
-                    <button className='sign-btn' onClick={() => reset()}>
-                        Sign In
-                    </button>
+                    <button className='sign-btn'>Sign In</button>
                     <div className='google-btn'>
                         <img src={require('./img/soc.jpg')} height={24} />
                         Sign in with Google
