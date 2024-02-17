@@ -3,10 +3,24 @@ import { useForm } from 'react-hook-form';
 
 import './log-form-hook.scss';
 export const LoginPageHook = () => {
-    const { register, handleSubmit, errors } = useForm();
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
 
     const onSubmit = data => {
-        console.log(data);
+        const userData = JSON.parse(localStorage.getItem(data.email));
+
+        if (userData) {
+            if (userData.password === data.password) {
+                console.log(userData.name + ' You Are Successfully Logged In');
+            } else {
+                console.log('Email or Password is not matching with our record');
+            }
+        } else {
+            console.log('Email or Password is not matching with our record');
+        }
     };
 
     return (
@@ -47,21 +61,12 @@ export const LoginPageHook = () => {
                     <p>Welcome back! Please enter your details.</p>
                     <div className='text-box'>
                         <label>Email</label>
-                        <input
-                            name='email'
-                            {...register({
-                                required: 'Email is required',
-                                pattern: {
-                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                    message: 'Invalid email address',
-                                },
-                            })}
-                        />
-                        {errors.email && <span className='error'>{errors.email.message}</span>}
+                        <input type='email' {...register('email', { required: true })} />
+                        {errors.email && <span style={{ color: 'red' }}>{errors.email.message}</span>}
                     </div>
                     <div className='text-box'>
                         <label>Password</label>
-                        <input name='password' type='password' {...register('message', { required: 'Required' })} />
+                        <input type='password' {...register('password')} />
                         {errors.password && <span className='error'>{errors.password.message}</span>}
                     </div>
                     <div className='check-box'>
