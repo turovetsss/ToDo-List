@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import logo from 'pages/img/logformimg.JPG';
+import logoname from 'pages/img/Logotype.jpg';
+import google from 'pages/img/soc.jpg';
 
 import './log-form.scss';
 export const LoginPage = () => {
@@ -41,8 +44,8 @@ export const LoginPage = () => {
         <div>
             <div className='header'>
                 <div className='header__logo'>
-                    <img src={require('./img/logformimg.JPG')} height={32} />
-                    <img src={require('./img/Logotype.jpg')} height={30} width={100} />
+                    <img src={logo} height={32} />
+                    <img src={logoname} height={30} width={100} />
                 </div>
                 <nav className='header__menu'>
                     <ul className='menu__list'>
@@ -69,7 +72,7 @@ export const LoginPage = () => {
             <form onSubmit={handleSubmit}>
                 <div className='box'>
                     <div className='box-signup'>
-                        <img src={require('./img/logformimg.JPG')} height={48} />
+                        <img src={logo} height={48} />
                     </div>
                     <h1>Log in to your account</h1>
                     <p>Welcome back! Please enter your details.</p>
@@ -103,7 +106,7 @@ export const LoginPage = () => {
                     <button className='sign-btn'>Sign In</button>
 
                     <div className='google-btn'>
-                        <img src={require('./img/soc.jpg')} height={24} />
+                        <img src={google} height={24} />
                         Sign in with Google
                     </div>
                     <div className='box-signup'>
