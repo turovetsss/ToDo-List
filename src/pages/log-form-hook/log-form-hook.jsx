@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import React from 'react';
 import logo from 'pages/img/logformimg.JPG';
 import logoname from 'pages/img/Logotype.jpg';
 import google from 'pages/img/soc.jpg';
@@ -20,7 +20,7 @@ export const LogFormHook = () => {
 
     return (
         <div>
-            <div className='header'>
+            <div className='header__account'>
                 <div className='header__logo'>
                     <img src={logo} height={32} />
                     <img src={logoname} height={30} width={100} />
@@ -28,7 +28,9 @@ export const LogFormHook = () => {
                 <nav className='header__menu'>
                     <ul className='menu__list'>
                         <li className='menu__item'>
-                            <a href='#'>Home</a>
+                            <a href='#' className='a1'>
+                                Home
+                            </a>
                         </li>
                         <li className='menu__item'>
                             <a href='#'>Products</a>
@@ -49,13 +51,13 @@ export const LogFormHook = () => {
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='box'>
-                    <div className='box-signup'>
+                    <div className='box__signup'>
                         <img src={logo} height={48} />
                     </div>
-                    <h1>Log in to your account</h1>
-                    <p>Welcome back! Please enter your details.</p>
+                    <h1 className='box__title'>Log in to your account</h1>
+                    <p className='box__sub-title'>Welcome back! Please enter your details.</p>
                     <div className='text-box'>
-                        <label>Email</label>
+                        <label className='text-box__label'>Email</label>
                         <input
                             type='email'
                             className={`form-control ${errors.email ? 'error' : 'email'}`}
@@ -64,7 +66,7 @@ export const LogFormHook = () => {
                         {errors.email && <span className='error-message'>Пожалуйста, введите корректный email.</span>}
                     </div>
                     <div className='text-box'>
-                        <label>Password</label>
+                        <label className='text-box__label'>Password</label>
                         <input
                             type='password'
                             className={`form-control ${errors.password ? 'error' : 'email'}`}
@@ -74,7 +76,7 @@ export const LogFormHook = () => {
                     </div>
                     <div className='check-box'>
                         <div>
-                            <input type='checkbox' id='scales' name='scales' checked={true} />
+                            <input type='checkbox' id='scales' name='scales' />
                             <label htmlFor='scales'>Remember for 30 days</label>
                         </div>
                         <div className='rem'>
@@ -86,7 +88,7 @@ export const LogFormHook = () => {
                         <img src={google} height={24} />
                         Sign in with Google
                     </div>
-                    <div className='box-signup'>
+                    <div className='box__signup'>
                         <a>Don’t have an account? </a>
                         <a className='a-name'>Sign up</a>
                     </div>

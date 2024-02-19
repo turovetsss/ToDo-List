@@ -95,7 +95,7 @@ export const LogForm = () => {
 
                     <div className='check-box'>
                         <div>
-                            <input type='checkbox' id='scales' name='scales' checked={true} />
+                            <input type='checkbox' id='scales' name='scales' />
                             <label htmlFor='scales'>Remember for 30 days</label>
                         </div>
                         <div className='rem'>
