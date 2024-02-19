@@ -1,0 +1,29 @@
+.div1 {
+    display: flex;
+    right: 0px;
+    position: sticky;
+    top: 0;
+    width: 1000px;
+    background-color: aqua;
+}
+.header__logo {
+    top: 32px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.div2 {
+    position: static;
+    display: flexbox;
+    right: 50px;
+    top: 0;
+    background-color: rgb(160, 80, 176);
+}
+.menu {
+    display: block;
+}
+.glav {
+    display: flex;
+    position: relative;
+}

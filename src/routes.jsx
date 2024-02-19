@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonsPage, FormPage, HooksExamples, InputsPage, LoginPage, LoginPageHook } from 'pages';
+import { ButtonsPage, FormPage, HooksExamples, InputsPage, LoginPage, LoginPageHook, SettingPage } from 'pages';
 
 export const ROUTES = [
     {
@@ -7,7 +7,11 @@ export const ROUTES = [
         element: <ButtonsPage />,
         errorElement: <>404</>,
     },
-
+    {
+        path: '/setting',
+        element: <SettingPage />,
+        errorElement: <>404</>,
+    },
     {
         path: '/inputs',
         element: <InputsPage />,
