@@ -4,7 +4,7 @@ import logoname from 'pages/img/Logotype.jpg';
 import google from 'pages/img/soc.jpg';
 
 import './log-form.scss';
-export const LoginPage = () => {
+export const LogForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState({});

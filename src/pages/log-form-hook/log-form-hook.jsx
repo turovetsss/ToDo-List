@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 
 import './log-form-hook.scss';
 
-export const LoginPageHook = () => {
+export const LogFormHook = () => {
     const {
         reset,
         register,
