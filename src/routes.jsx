@@ -1,6 +1,5 @@
 import React from 'react';
 import { ButtonsPage, FormPage, HooksExamples, InputsPage, LoginPage, LoginPageHook, SettingPage } from 'pages';
-
 export const ROUTES = [
     {
         path: '/buttons',
