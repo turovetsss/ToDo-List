@@ -1,10 +1,14 @@
 import React from 'react';
 import threeLayers from 'pages/img/3-layers.png';
+import avatar from 'pages/img/Avatar.png';
 import task from 'pages/img/check-square.png';
 import flag from 'pages/img/flag.png';
 import home from 'pages/img/home.png';
+import life from 'pages/img/life-buoy.png';
+import logout from 'pages/img/log-out.png';
 import logo from 'pages/img/logformimg.JPG';
 import logoname from 'pages/img/Logotype.jpg';
+import setting from 'pages/img/settings.png';
 import user from 'pages/img/users.png';
 
 import './setting-page.scss';
@@ -59,6 +63,32 @@ export const SettingPage = () => {
                                 <option value='first'>Users</option>
                             </select>
                         </li>
+                        <li className='form-setting__content__support'>
+                            <img src={life} alt='' width={20} />
+                            <p>Support</p>
+                        </li>
+                        <li className='form-setting__content__additional'>
+                            <img src={setting} alt='' width={20} />
+                            <p>Settings</p>
+                        </li>
+
+                        <div className='used-space'>
+                            <p className='used-space__title'>Used space</p>
+                            <p className='used-space__subtitle'>Your team has used 80% of your available space. Need more?</p>
+                            <div id='progress'></div>
+                            <p className='used-space__dismiss'>
+                                Dismiss<span>Upgrade plan</span>
+                            </p>
+                        </div>
+                        <hr></hr>
+                        <div className='profile'>
+                            <img src={avatar} alt='' />
+                            <div className='profile__info'>
+                                <div className='profile__info__name'>Olivia Rhye</div>
+                                <div className='profile__info__email'>olivia@untitledui.com</div>
+                            </div>
+                            <img src={logout} alt='' />
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -75,17 +105,17 @@ export const SettingPage = () => {
                     <input className='form-tabs__input' id='tab4' type='radio' name='tabs' />
                     <label htmlFor='tab4'>Team</label>
                     <input className='form-tabs__input' id='tab5' type='radio' name='tabs' />
-                    <label htmlFor='tab1'>Plan</label>
+                    <label htmlFor='tab5'>Plan</label>
                     <input className='form-tabs__input' id='tab6' type='radio' name='tabs' />
-                    <label htmlFor='tab2'>Billing</label>
+                    <label htmlFor='tab6'>Billing</label>
                     <input className='form-tabs__input' id='tab6' type='radio' name='tabs' />
-                    <label htmlFor='tab3'>Email</label>
+                    <label htmlFor='tab7'>Email</label>
                     <input className='form-tabs__input' id='tab8' type='radio' name='tabs' />
-                    <label htmlFor='tab4'>Notifications</label>
+                    <label htmlFor='tab8'>Notifications</label>
                     <input className='form-tabs__input' id='tab9' type='radio' name='tabs' />
-                    <label htmlFor='tab4'>Integrations</label>
+                    <label htmlFor='tab9'>Integrations</label>
                     <input className='form-tabs__input' id='tab10' type='radio' name='tabs' />
-                    <label htmlFor='tab4'>API</label>
+                    <label htmlFor='tab10'>API</label>
                 </div>
                 <div className='form-content'>
                     <div className='form-content__group' id='content2'>
@@ -156,9 +186,23 @@ export const SettingPage = () => {
                         </div>
                         <div className='input-box'>
                             <select className='input-box__select'>
-                                <img src={flag} alt='' />
                                 <option value='first'>Pacific Standard Time (PST) UTC−08:00</option>
                             </select>
+                        </div>
+                    </div>
+                </div>
+                <hr></hr>
+                <div className='form-content'>
+                    <div className='form-content__group' id='content2'>
+                        <div className='text-box'>
+                            <div className='text-box__subtitle'>Bio</div>
+                            <div className='text-box__subsubtitle'>Write a short introduction.</div>
+                        </div>
+                        <div className='input-box'>
+                            <input
+                                className='input-box__introduction'
+                                placeholder="I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI design, brand strategy, and Webflow development."
+                            />
                         </div>
                     </div>
                 </div>
