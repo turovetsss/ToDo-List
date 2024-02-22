@@ -14,7 +14,7 @@ import user from 'pages/img/users.png';
 import './setting-page.scss';
 export const SettingPage = () => {
     return (
-        <>
+        <div className='page'>
             <div className='form-setting'>
                 <div className='form-setting__content'>
                     <ul>
@@ -76,9 +76,8 @@ export const SettingPage = () => {
                             <p className='used-space__title'>Used space</p>
                             <p className='used-space__subtitle'>Your team has used 80% of your available space. Need more?</p>
                             <div id='progress'></div>
-                            <p className='used-space__dismiss'>
-                                Dismiss<span>Upgrade plan</span>
-                            </p>
+                            <p className='used-space__dismiss'>Dismiss</p>
+                            <div className='used-space__upgrade'>Upgrade plan</div>
                         </div>
                         <hr></hr>
                         <div className='profile'>
@@ -172,7 +171,6 @@ export const SettingPage = () => {
                         </div>
                         <div className='input-box'>
                             <select className='input-box__select'>
-                                <img src={flag} alt='' />
                                 <option value='first'>United States</option>
                             </select>
                         </div>
@@ -206,7 +204,17 @@ export const SettingPage = () => {
                         </div>
                     </div>
                 </div>
+                <hr></hr>
+                <div className='form-content'>
+                    <div className='form-content__group' id='content2'>
+                        <div className='text-box'>
+                            <div className='text-box__subtitle'>Portfolio Projects</div>
+                            <div className='text-box__subsubtitle'>Share a few snippets of your work.</div>
+                        </div>
+                        <div className='input-box'></div>
+                    </div>
+                </div>
             </div>
-        </>
+        </div>
     );
 };
