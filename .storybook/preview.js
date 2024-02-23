@@ -1,3 +1,5 @@
+import '../src/variables.scss';
+
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
