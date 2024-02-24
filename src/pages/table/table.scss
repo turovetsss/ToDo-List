@@ -1,5 +1,5 @@
 .header {
-    height: 67px;
+    height: 55px;
     padding: 24px;
     &__name {
         margin: 10px;
@@ -172,6 +172,7 @@
                 &__data {
                     display: flex;
                     .text {
+                        margin: 15px;
                         &__subtitle {
                             color: rgb(102, 112, 133);
                             font-size: 14px;
@@ -298,7 +299,6 @@
                 margin: 0px 0px;
 
                 input {
-                    margin-right: 14px;
                     position: static;
                     width: 20px;
                     height: 20px;

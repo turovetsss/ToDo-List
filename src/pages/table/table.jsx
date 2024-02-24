@@ -108,6 +108,63 @@ export const TablePage = () => {
                             </div>
                         </td>
                     </tr>
+                    <tr className='table___line'>
+                        <td className='table__line__cell'>
+                            <div className='table__line__cell__user'>
+                                <div className='table__line__cell__user__data'>
+                                    <input type='checkbox' />
+                                    <img src={avatar} alt='' />
+                                    <div className='text'>
+                                        <div className='text__title'>Olivia Rhye</div>
+                                        <div className='text__subtitle'>@olivia</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td className='table__line__cell'>
+                            <div className='table__line__cell__status'>
+                                <div className='table__line__cell__status__data'>
+                                    <div className='status'> Active </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td className='table__line__cell'>
+                            <div className='table__line__cell__role'>
+                                <div className='table__line__cell__role__data'>
+                                    <div className='text'>
+                                        <div className='text__subtitle'>Product Designer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td className='table__line__cell'>
+                            <div className='table__line__cell__role'>
+                                <div className='table__line__cell__role__data'>
+                                    <div className='text'>
+                                        <div className='text__subtitle'>olivia@untitledui.com</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td className='table__line__cell'>
+                            <div className='table__line__cell__teams'>
+                                <div className='table__line__cell__teams__data'>
+                                    <div className='table__line__cell__teams__data__design'>Design</div>
+                                    <div className='table__line__cell__teams__data__product'>Product</div>
+                                    <div className='table__line__cell__teams__data__marketing'>Marketing</div>
+                                    <div className='table__line__cell__teams__data__etc'>+4</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td className='table__line__cell'>
+                            <div className='table__line__cell__none'>
+                                <div className='table__line__cell__none__data'>
+                                    <img src={trash} alt='' />
+                                    <img src={edit} alt='' />
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
