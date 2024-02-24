@@ -11,4 +11,6 @@ const preview = {
   },
 };
 
+import '../src/variables.scss';
+
 export default preview;
