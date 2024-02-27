@@ -1,0 +1,187 @@
+.header__account {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    .login {
+        &__button {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            padding: 10px 18px;
+            background-color: white;
+            color: var(--Gray-300);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    }
+
+    .menu {
+        &__list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        &__item {
+            margin-right: 32px;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                text-decoration: none;
+                margin-right: 15px;
+                color: var(--Gray-500);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+            }
+        }
+    }
+}
+.box {
+    background: white;
+    width: 360px;
+    border-radius: 6px;
+    margin: 0 auto 0 auto;
+    margin-top: 95px;
+    padding: 0px 0px 70px 0px;
+    &__title {
+        color: var(--Gray-900);
+        text-align: center;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 38px;
+    }
+    &__sub-title {
+        text-align: center;
+        color: #667085;
+    }
+    &__signup {
+        margin-top: 20px;
+        text-align: center;
+        &__button {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            padding: 10px 18px;
+            background-color: var(--Brand-600);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    }
+}
+
+.email {
+    border-radius: 8px;
+    border: 1px solid var(--Gray-300);
+    background: var(--White);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    padding: 10px 14px;
+    width: 330px;
+    color: #aaaaaa;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.check-box {
+    margin-top: 15px;
+    display: flex;
+    :hover {
+        cursor: pointer;
+    }
+}
+.a-name {
+    font-size: 14px;
+    color: #6941c6;
+    font-weight: 600;
+}
+.rem {
+    padding-left: 90px;
+    display: inline;
+}
+
+.sign-btn {
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--Brand-600);
+    background: var(--Brand-600);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    display: flex;
+    transition: 0.3s;
+    padding: 14px 18px;
+    justify-content: center;
+    align-items: center;
+    width: 365px;
+    color: #fff;
+    font-weight: 600;
+    &:hover {
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        color: var(--Brand-600);
+        border: 1px solid var(--Brand-600);
+        background: white;
+    }
+}
+.text-box {
+    margin-top: 20px;
+    &__label {
+        font-size: 14px;
+    }
+}
+.google-btn {
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--Gray-300);
+    background: var(--White, #fff);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    display: flex;
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    width: 325px;
+    color: #344054;
+    font-weight: 600;
+    &:hover {
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 8px;
+        border: 1px solid var(--Brand-600);
+        background: var(--White);
+        box-shadow: 0px 4px 4px 0px rgba(45, 46, 50, 0.08);
+        display: flex;
+        padding: 10px 18px;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        width: 325px;
+        color: #344054;
+        font-weight: 600;
+    }
+}
+.box-signup:hover {
+    cursor: pointer;
+}
+.error {
+    border-radius: 8px;
+    border: 1px solid red;
+    background: var(--White);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    padding: 10px 14px;
+    width: 330px;
+    color: #aaaaaa;
+    margin-top: 10px;
+    font-size: 1em;
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}

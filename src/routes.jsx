@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonsPage, FormPage, HooksExamples, InputsPage } from 'pages';
+import { ButtonsPage, FormPage, HooksExamples, InputsPage, LogForm, LogFormHook } from 'pages';
 
 export const ROUTES = [
     {
@@ -7,6 +7,7 @@ export const ROUTES = [
         element: <ButtonsPage />,
         errorElement: <>404</>,
     },
+
     {
         path: '/inputs',
         element: <InputsPage />,
@@ -20,6 +21,16 @@ export const ROUTES = [
     {
         path: '/hooks-examples',
         element: <HooksExamples />,
+        errorElement: <>404</>,
+    },
+    {
+        path: '/login-page',
+        element: <LogForm />,
+        errorElement: <>404</>,
+    },
+    {
+        path: '/login-hook',
+        element: <LogFormHook />,
         errorElement: <>404</>,
     },
 ];
