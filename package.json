@@ -8,7 +8,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test:units": "react-scripts test --testPathIgnorePatterns storyshots.test.js",
+    "test:snapshots": "react-scripts test ./src/storyshots.test.js",
     "eject": "react-scripts eject",
     "eslint": "eslint . --ext js,jsx",
     "eslint:fix": "eslint . --ext js,jsx --fix",
@@ -18,7 +19,8 @@
     "lint-staged": "lint-staged",
     "stylelint": "stylelint src/**/*.scss",
     "stylelint:fix": "stylelint src/**/*.scss --fix",
-    "stylelint:watch": "nodemon --watch . --ext .css,.scss --exec \"npm run-script stylelint\""
+    "stylelint:watch": "nodemon --watch . --ext .css,.scss --exec \"npm run-script stylelint\"",
+    "start:server": "nodemon --watch ./src/server --exec \"babel-node ./src/server/index.js\""
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +53,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "fastify": "^4.26.1",
     "nanoid": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -62,6 +65,8 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.23.3",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
     "@storybook/addon-essentials": "^7.5.2",
     "@storybook/addon-interactions": "^7.5.2",
     "@storybook/addon-links": "^7.5.2",
@@ -88,7 +93,7 @@
     "eslint-plugin-unicorn": "^49.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.1.0",
-    "nodemon": "^3.0.1",
+    "nodemon": "^3.1.0",
     "prettier": "^3.1.0",
     "puppeteer": "18.1.0",
     "react-test-renderer": "18.1.0",
