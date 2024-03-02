@@ -1,7 +1,7 @@
-.header {
+.title {
     height: 55px;
     padding: 24px;
-    &__name {
+    h1 {
         margin: 10px;
         display: inline;
         color: rgb(16, 24, 40);
@@ -11,7 +11,7 @@
         letter-spacing: 0%;
         text-align: left;
     }
-    &__user {
+    span {
         padding: 2px 8px 2px 8px;
         display: inline;
         border-radius: 16px;
@@ -24,14 +24,7 @@
         background: rgb(249, 245, 255);
     }
 }
-.img_head {
-    position: static;
-    width: 15px;
-    height: 15px;
-    box-sizing: border-box;
-    order: 1;
-    flex-grow: 0;
-}
+
 .page-btn {
     position: static;
     width: 100%;
@@ -125,232 +118,7 @@
 .table {
     width: 100%;
     border-collapse: collapse;
-    &__line {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        height: 67px;
-        width: 100%;
-        box-sizing: border-box;
-        border-bottom: 1px solid rgb(234, 236, 240);
-        background: rgb(249, 250, 251);
-        color: rgb(102, 112, 133);
-        font-weight: 500;
-        line-height: 18px;
-        letter-spacing: 0%;
-        text-align: left;
-        &__cell {
-            box-sizing: border-box;
-            border-bottom: 1px solid rgb(234, 236, 240);
-            display: table-cell;
-            &__none {
-                position: static;
-                width: 116px;
-                height: 72px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 16px;
-                &__data {
-                    display: flex;
-                    img {
-                        margin-right: 10px;
-                    }
-                }
-            }
-            &__teams {
-                position: static;
-                width: 288px;
-                height: 72px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 16px 24px 16px 24px;
-                &__data {
-                    display: flex;
-                    &__design {
-                        margin-right: 5px;
-                        position: static;
-                        width: 56px;
-                        height: 22px;
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 2px 8px 2px 8px;
-                        border-radius: 16px;
-                        background: rgb(249, 245, 255);
-                        color: rgb(105, 65, 198);
-                        font-size: 12px;
-                        font-weight: 500;
-                        line-height: 18px;
-                        letter-spacing: 0%;
-                        text-align: center;
-                    }
-                    &__product {
-                        margin-right: 5px;
-                        position: static;
-                        width: 62px;
-                        height: 22px;
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 2px 8px 2px 8px;
-                        flex: none;
-                        order: 0;
-                        flex-grow: 0;
-                        border-radius: 16px;
-                        background: rgb(239, 248, 255);
-                        color: rgb(23, 92, 211);
-                        font-size: 12px;
-                        font-weight: 500;
-                        line-height: 18px;
-                        letter-spacing: 0%;
-                        text-align: center;
-                    }
-                    &__marketing {
-                        margin-right: 5px;
-                        position: static;
-                        width: 74px;
-                        height: 22px;
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 2px 8px 2px 8px;
-                        border-radius: 16px;
-                        background: rgb(238, 244, 255);
-                        color: rgb(53, 56, 205);
-                        font-size: 12px;
-                        font-weight: 500;
-                        line-height: 18px;
-                        letter-spacing: 0%;
-                        text-align: center;
-                    }
-                    &__etc {
-                        position: static;
-                        width: 32px;
-                        height: 22px;
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 2px 8px 2px 8px;
-                        border-radius: 16px;
-                        background: rgb(242, 244, 247);
-                        color: rgb(52, 64, 84);
-                        font-size: 12px;
-                        font-weight: 500;
-                        line-height: 18px;
-                        letter-spacing: 0%;
-                        text-align: center;
-                    }
-                }
-            }
-            &__role {
-                position: static;
-                width: 176px;
-                height: 72px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 16px 24px 16px 24px;
-                &__data {
-                    display: flex;
-                    .text {
-                        margin: 15px;
-                        &__subtitle {
-                            color: rgb(102, 112, 133);
-                            font-size: 14px;
-                            font-weight: 400;
-                            line-height: 20px;
-                            letter-spacing: 0%;
-                            text-align: left;
-                        }
-                    }
-                }
-            }
 
-            &__status {
-                position: static;
-                width: 120px;
-                height: 72px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 16px 24px 16px 24px;
-                &__data {
-                    display: flex;
-                    .status {
-                        border-radius: 16px;
-                        background: rgb(236, 253, 243);
-                        position: static;
-                        width: 65px;
-                        height: 22px;
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 2px 8px 2px 6px;
-                        color: rgb(2, 122, 72);
-                        font-size: 12px;
-                        font-weight: 500;
-                        line-height: 18px;
-                        letter-spacing: 0%;
-                        text-align: center;
-                    }
-                }
-            }
-            &__user {
-                position: static;
-                width: 292px;
-                height: 72px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 16px 24px 16px 24px;
-
-                &__data {
-                    display: flex;
-                    .text {
-                        margin-left: 10px;
-                        padding: 5px;
-                        display: block;
-                        &__title {
-                            color: rgb(16, 24, 40);
-                            font-size: 14px;
-                            font-weight: 500;
-                            line-height: 20px;
-                            letter-spacing: 0%;
-                            text-align: left;
-                        }
-                        &__subtitle {
-                            color: rgb(102, 112, 133);
-                            font-weight: 400;
-                            font-size: 14px;
-                        }
-                    }
-                    input {
-                        margin-top: 15px;
-                        position: static;
-                        width: 20px;
-                        height: 20px;
-                        border-radius: 6px;
-                    }
-                    img {
-                        margin-left: 10px;
-                        padding: 5px;
-                    }
-                }
-            }
-        }
-    }
     &__header {
         flex-direction: row;
         justify-content: flex-start;
@@ -376,7 +144,7 @@
 
         &__row {
             display: table-cell;
-            &__name {
+            &-name {
                 position: static;
                 width: 292px;
                 height: 44px;
@@ -401,7 +169,7 @@
                     background: rgb(255, 255, 255);
                 }
             }
-            &__status {
+            &-status {
                 position: static;
                 width: 120px;
                 height: 44px;
@@ -410,8 +178,16 @@
                 justify-content: flex-start;
                 align-items: center;
                 padding: 12px 24px 12px 24px;
+                img {
+                    position: static;
+                    width: 15px;
+                    height: 15px;
+                    box-sizing: border-box;
+                    order: 1;
+                    flex-grow: 0;
+                }
             }
-            &__role {
+            &-role {
                 position: static;
                 width: 176px;
                 height: 44px;
@@ -420,8 +196,16 @@
                 justify-content: flex-start;
                 align-items: center;
                 padding: 12px 24px 12px 24px;
+                img {
+                    position: static;
+                    width: 15px;
+                    height: 15px;
+                    box-sizing: border-box;
+                    order: 1;
+                    flex-grow: 0;
+                }
             }
-            &__email {
+            &-email {
                 position: static;
                 width: 224px;
                 height: 44px;
@@ -431,7 +215,7 @@
                 align-items: center;
                 padding: 12px 24px 12px 24px;
             }
-            &__team {
+            &-team {
                 position: static;
                 width: 288px;
                 height: 44px;
@@ -442,11 +226,5 @@
                 padding: 12px 24px 12px 24px;
             }
         }
-    }
-
-    &__data {
-        padding: 10px;
-        border: 1px solid #ddd;
-        text-align: left;
     }
 }
