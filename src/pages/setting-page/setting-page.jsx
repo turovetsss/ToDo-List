@@ -1,4 +1,5 @@
 import React from 'react';
+import { TabsContainer } from 'components/tab';
 import threeLayers from 'pages/img/3-layers.png';
 import avatar from 'pages/img/Avatar.png';
 import task from 'pages/img/check-square.png';
@@ -94,28 +95,8 @@ export const SettingPage = () => {
 
             <div className='form-main'>
                 <div className='form-main__logo'>Settings</div>
-                <div className='form-tabs'>
-                    <input className='form-tabs__input' id='tab1' type='radio' name='tabs' checked={true} />
-                    <label htmlFor='tab1'>My details</label>
-                    <input className='form-tabs__input' id='tab2' type='radio' name='tabs' />
-                    <label htmlFor='tab2'>Profile</label>
-                    <input className='form-tabs__input' id='tab3' type='radio' name='tabs' />
-                    <label htmlFor='tab3'>Password</label>
-                    <input className='form-tabs__input' id='tab4' type='radio' name='tabs' />
-                    <label htmlFor='tab4'>Team</label>
-                    <input className='form-tabs__input' id='tab5' type='radio' name='tabs' />
-                    <label htmlFor='tab5'>Plan</label>
-                    <input className='form-tabs__input' id='tab6' type='radio' name='tabs' />
-                    <label htmlFor='tab6'>Billing</label>
-                    <input className='form-tabs__input' id='tab6' type='radio' name='tabs' />
-                    <label htmlFor='tab7'>Email</label>
-                    <input className='form-tabs__input' id='tab8' type='radio' name='tabs' />
-                    <label htmlFor='tab8'>Notifications</label>
-                    <input className='form-tabs__input' id='tab9' type='radio' name='tabs' />
-                    <label htmlFor='tab9'>Integrations</label>
-                    <input className='form-tabs__input' id='tab10' type='radio' name='tabs' />
-                    <label htmlFor='tab10'>API</label>
-                </div>
+
+                <TabsContainer />
                 <div className='form-content'>
                     <div className='form-content__group' id='content2'>
                         <div className='text-box'>

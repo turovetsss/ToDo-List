@@ -304,16 +304,6 @@
         font-size: 30px;
         font-weight: 500;
     }
-    .form-tabs {
-        margin-left: -30px;
-        background: #fff;
-        display: block;
-        padding: 10px 30px 80px;
-        &__input {
-            clear: both;
-            display: none;
-        }
-    }
 }
 .form-content {
     display: block;
@@ -484,22 +474,4 @@ hr {
     position: static;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-#tab1:checked ~ #content1,
-#tab2:checked ~ #content2,
-#tab3:checked ~ #content3,
-#tab4:checked ~ #content4,
-#tab5:checked ~ #content4,
-#tab6:checked ~ #content6,
-#tab7:checked ~ #content7,
-#tab8:checked ~ #content8,
-#tab9:checked ~ #content9,
-#tab10:checked ~ #content10 {
-    display: block;
-}
-input:checked + label {
-    border-bottom: 2px solid #6941c6;
-    color: #6941c6;
-    text-decoration: none;
 }
