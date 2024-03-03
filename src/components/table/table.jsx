@@ -5,7 +5,7 @@ import { classname } from 'utils';
 
 import './table.scss';
 const data = [
-    {ы
+    {
         id: 1,
         name: 'Olivia Rhye',
         login: '@olivia',
