@@ -1,91 +1,93 @@
 import React from 'react';
+import threeLayers from 'assets/img/3-layers.png';
+import avatar from 'assets/img/Avatar.png';
+import task from 'assets/img/check-square.png';
+import flag from 'assets/img/flag.png';
+import home from 'assets/img/home.png';
+import life from 'assets/img/life-buoy.png';
+import logout from 'assets/img/log-out.png';
+import logo from 'assets/img/logformimg.JPG';
+import logoname from 'assets/img/Logotype.jpg';
+import setting from 'assets/img/settings.png';
+import user from 'assets/img/users.png';
 import { TabsContainer } from 'components/tab';
-import threeLayers from 'pages/img/3-layers.png';
-import avatar from 'pages/img/Avatar.png';
-import task from 'pages/img/check-square.png';
-import flag from 'pages/img/flag.png';
-import home from 'pages/img/home.png';
-import life from 'pages/img/life-buoy.png';
-import logout from 'pages/img/log-out.png';
-import logo from 'pages/img/logformimg.JPG';
-import logoname from 'pages/img/Logotype.jpg';
-import setting from 'pages/img/settings.png';
-import user from 'pages/img/users.png';
+import { classname } from 'utils';
+const cn = classname('setting');
 
 import './setting-page.scss';
 export const SettingPage = () => {
     return (
         <div className='page'>
-            <div className='form-setting'>
-                <div className='form-setting__content'>
+            <div className={cn()}>
+                <div className={cn('content')}>
                     <ul>
                         <li>
-                            <div className='form-setting__content__header'>
+                            <div className={cn('content-logo')}>
                                 <img src={logo} height={32} />
                                 <img src={logoname} height={30} width={100} />
                             </div>
                         </li>
-                        <li className='form-setting__content__header'>
-                            <input className='form-setting__content__input' placeholder=' 🔍︎  Search' />
+                        <li className={cn('content-logo')}>
+                            <input className={cn('content-logo-input')} placeholder=' 🔍︎  Search' />
                         </li>
-                        <li className='form-setting__content__dropdown'>
+                        <li className={cn('content-dropdown')}>
                             <img src={home} alt='' width={20} />
-                            <select className='form-setting__content__dropdown__choice'>
+                            <select className={cn('content-dropdown-choice')}>
                                 <option value='first'>Home</option>
                             </select>
                         </li>
-                        <li className='form-setting__content__dropdown'>
+                        <li className={cn('content-dropdown')}>
                             <img src={home} alt='' width={20} />
-                            <select className='form-setting__content__dropdown__choice'>
+                            <select className={cn('content-dropdown-choice')}>
                                 <option value='first'>Dashboard</option>
                             </select>
                         </li>
-                        <li className='form-setting__content__dropdown'>
+                        <li className={cn('content-dropdown')}>
                             <img src={threeLayers} alt='' width={20} />
-                            <select className='form-setting__content__dropdown__choice'>
+                            <select className={cn('content-dropdown-choice')}>
                                 <option value='first'>Projects</option>
                             </select>
                         </li>
-                        <li className='form-setting__content__dropdown'>
+                        <li className={cn('content-dropdown')}>
                             <img src={task} alt='' width={20} />
-                            <select className='form-setting__content__dropdown__choice'>
+                            <select className={cn('content-dropdown-choice')}>
                                 <option value='first'>Tasks</option>
                             </select>
                         </li>
-                        <li className='form-setting__content__dropdown'>
+                        <li className={cn('content-dropdown')}>
                             <img src={flag} alt='' width={20} />
-                            <select className='form-setting__content__dropdown__choice'>
+                            <select className={cn('content-dropdown-choice')}>
                                 <option value='first'>Reporting</option>
                             </select>
                         </li>
-                        <li className='form-setting__content__dropdown'>
+                        <li className={cn('content-dropdown')}>
                             <img src={user} alt='' width={20} />
-                            <select className='form-setting__content__dropdown__choice'>
+                            <select className={cn('content-dropdown-choice')}>
                                 <option value='first'>Users</option>
                             </select>
                         </li>
-                        <li className='form-setting__content__support'>
+                        <li className={cn('content-support')}>
                             <img src={life} alt='' width={20} />
                             <p>Support</p>
                         </li>
-                        <li className='form-setting__content__additional'>
+                        <li className={cn('content-additional')}>
                             <img src={setting} alt='' width={20} />
                             <p>Settings</p>
                         </li>
 
-                        <div className='used-space'>
-                            <p className='used-space__title'>Used space</p>
-                            <p className='used-space__subtitle'>Your team has used 80% of your available space. Need more?</p>
+                        <div className={cn('content-space')}>
+                            <h5>Used space</h5>
+                            <p>Your team has used 80% of your available space. Need more?</p>
                             <div id='progress'></div>
-                            <p className='used-space__dismiss'>Dismiss</p>
-                            <div className='used-space__upgrade'>Upgrade plan</div>
+                            <a>Dismiss</a>
+                            <span>Upgrade plan</span>
                         </div>
                         <hr></hr>
-                        <div className='profile'>
+                        <div className={cn('content-profile')}>
                             <img src={avatar} alt='' />
-                            <div className='profile__info'>
-                                <div className='profile__info__name'>Olivia Rhye</div>
-                                <div className='profile__info__email'>olivia@untitledui.com</div>
+                            <div className={cn('content-profile-info')}>
+                                <h5>Olivia Rhye</h5>
+                                <span>olivia@untitledui.com</span>
                             </div>
                             <img src={logout} alt='' />
                         </div>
@@ -93,106 +95,92 @@ export const SettingPage = () => {
                 </div>
             </div>
 
-            <div className='form-main'>
-                <div className='form-main__logo'>Settings</div>
-
+            <div className={cn('main')}>
+                <h2>Settings</h2>
                 <TabsContainer />
-                <div className='form-content'>
-                    <div className='form-content__group' id='content2'>
-                        <div className='text-box'>
-                            <div className='text-box__title'>Personal info</div>
-                            <div className='text-box__subtitle'>Update your photo and personal details here. </div>
+                <div className={cn('main-content')}>
+                    <div className={cn('main-content-group')} id='content2'>
+                        <div className={cn('main-content-group-text')}>
+                            <h3>Personal info</h3>
+                            <p>Update your photo and personal details here. </p>
                         </div>
-                        <div className='btn-box'>
-                            <button className='btn-box__cancel'>Cancel</button>
-                            <button className='btn-box__save'>Save</button>
-                        </div>
+                        <button>Cancel</button>
+                        <span>Save</span>
                     </div>
                 </div>
 
                 <hr></hr>
-                <div className='form-content'>
-                    <div className='form-content__group' id='content2'>
-                        <div className='text-box'>
-                            <div className='text-box__subtitle'>Name</div>
+                <div className={cn('main-content')}>
+                    <div className={cn('main-content-group')} id='content2'>
+                        <div className={cn('main-content-group-text')}>
+                            <p>Name</p>
                         </div>
-                        <div className='input-box'>
-                            <input type='text' placeholder='Oliva' className='input-box__name' />
-                            <input type='text' placeholder='Rhye' className='input-box__name' />
-                        </div>
+                        <input type='text' placeholder='Oliva' className={cn('main-content-group-name')} />
+                        <input type='text' placeholder='Rhye' className={cn('main-content-group-name')} />
                     </div>
                 </div>
                 <hr></hr>
-                <div className='form-content'>
-                    <div className='form-content__group' id='content2'>
-                        <div className='text-box'>
-                            <div className='text-box__subtitle'>Email address</div>
+                <div className={cn('main-content')}>
+                    <div className={cn('main-content-group')} id='content2'>
+                        <div className={cn('main-content-group-text')}>
+                            <p>Email address</p>
                         </div>
-                        <div className='input-box'>
-                            <input type='text' placeholder='olivia@untitledui.com' className='input-box__info' />
-                        </div>
+                        <input type='text' placeholder='olivia@untitledui.com' className={cn('main-content-group-info')} />
                     </div>
                 </div>
                 <hr></hr>
-                <div className='form-content'>
-                    <div className='form-content__group' id='content2'>
-                        <div className='text-box'>
-                            <div className='text-box__subtitle'>Role</div>
+                <div className={cn('main-content')}>
+                    <div className={cn('main-content-group')} id='content2'>
+                        <div className={cn('main-content-group-text')}>
+                            <p>Role</p>
                         </div>
-                        <div className='input-box'>
-                            <input type='text' placeholder='Product Designer' className='input-box__info' />
-                        </div>
+
+                        <input type='text' placeholder='Product Designer' className={cn('main-content-group-info')} />
                     </div>
                 </div>
                 <hr></hr>
-                <div className='form-content'>
-                    <div className='form-content__group' id='content2'>
-                        <div className='text-box'>
-                            <div className='text-box__subtitle'>Country</div>
+                <div className={cn('main-content')}>
+                    <div className={cn('main-content-group')} id='content2'>
+                        <div className={cn('main-content-group-text')}>
+                            <p>Country</p>
                         </div>
-                        <div className='input-box'>
-                            <select className='input-box__select'>
-                                <option value='first'>United States</option>
-                            </select>
-                        </div>
+                        <select className={cn('main-content-group-select')}>
+                            <option value='first'>United States</option>
+                        </select>
                     </div>
                 </div>
                 <hr></hr>
-                <div className='form-content'>
-                    <div className='form-content__group' id='content2'>
-                        <div className='text-box'>
-                            <div className='text-box__subtitle'>TimeZone</div>
+                <div className={cn('main-content')}>
+                    <div className={cn('main-content-group')} id='content2'>
+                        <div className={cn('main-content-group-text')}>
+                            <p>TimeZone</p>
                         </div>
-                        <div className='input-box'>
-                            <select className='input-box__select'>
-                                <option value='first'>Pacific Standard Time (PST) UTC−08:00</option>
-                            </select>
-                        </div>
+                        <select className={cn('main-content-group-select')}>
+                            <option value='first'>Pacific Standard Time (PST) UTC−08:00</option>
+                        </select>
                     </div>
                 </div>
                 <hr></hr>
-                <div className='form-content'>
-                    <div className='form-content__group' id='content2'>
-                        <div className='text-box'>
-                            <div className='text-box__subtitle'>Bio</div>
-                            <div className='text-box__subsubtitle'>Write a short introduction.</div>
+                <div className={cn('main-content')}>
+                    <div className={cn('main-content-group')} id='content2'>
+                        <div className={cn('main-content-group-text')}>
+                            <h3>Bio</h3>
+                            <p>Write a short introduction.</p>
                         </div>
-                        <div className='input-box'>
-                            <input
-                                className='input-box__introduction'
-                                placeholder="I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI design, brand strategy, and Webflow development."
-                            />
-                        </div>
+
+                        <input
+                            className={cn('main-content-group-introduction')}
+                            placeholder="I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI design, brand strategy, and Webflow development."
+                        />
                     </div>
                 </div>
                 <hr></hr>
-                <div className='form-content'>
-                    <div className='form-content__group' id='content2'>
-                        <div className='text-box'>
-                            <div className='text-box__subtitle'>Portfolio Projects</div>
-                            <div className='text-box__subsubtitle'>Share a few snippets of your work.</div>
+                <div className={cn('main-content')}>
+                    <div className={cn('main-content-group')} id='content2'>
+                        <div className={cn('main-content-group-text')}>
+                            <h3>Portfolio Projects</h3>
+                            <p>Share a few snippets of your work.</p>
                         </div>
-                        <div className='input-box'></div>
                     </div>
                 </div>
             </div>
