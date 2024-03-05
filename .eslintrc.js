@@ -5,7 +5,6 @@ module.exports = {
         browser: true,
         node: true,
         es6: true,
-        jest: true,
     },
     plugins: ['react-hooks', 'import', 'react', 'simple-import-sort', 'dirnames', 'unicorn', 'prettier'],
     settings: {
