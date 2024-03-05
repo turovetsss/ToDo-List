@@ -15,7 +15,6 @@ export const TablePage = () => {
                 <span>100 user</span>
             </div>
             <Table></Table>
-
             <div className='page-btn'>
                 <div className='page-btn__previous'>
                     <img src={left} alt='' />

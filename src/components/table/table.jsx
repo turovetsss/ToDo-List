@@ -3,27 +3,10 @@ import down from 'pages/img/arrow-down.png';
 import help from 'pages/img/Help-icon.png';
 import { classname } from 'utils';
 
+import { tableData } from './data';
+
 import './table.scss';
-const data = [
-    {
-        id: 1,
-        name: 'Olivia Rhye',
-        login: '@olivia',
-        status: 'Active',
-        role: 'Product Designer',
-        email: 'olivia@untitledui.com',
-        team: ['Design', 'Product', 'Marketing', '+4'],
-    },
-    {
-        id: 2,
-        name: 'Olivia Rhye',
-        login: '@olivia',
-        status: 'Active',
-        role: 'Product Designer',
-        email: 'olivia@untitledui.com',
-        team: ['Design', 'Product', 'Marketing', '+4'],
-    },
-];
+
 const cn = classname('table');
 
 export const Table = () => {
@@ -65,7 +48,7 @@ export const Table = () => {
                 </tr>
             </thead>
             <tbody>
-                {data.map(row => (
+                {tableData.map(row => (
                     <tr className={cn('line')} key={row.id}>
                         <td className={cn('line__cell')}>
                             <div className={cn('line__cell-user')}>

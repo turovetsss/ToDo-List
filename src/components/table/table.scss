@@ -15,6 +15,7 @@
         line-height: 18px;
         letter-spacing: 0%;
         text-align: left;
+
         p {
             padding-right: 10px;
             color: rgb(102, 112, 133);
@@ -26,90 +27,67 @@
         }
 
         &__row {
-            display: table-cell;
-            &-name {
-                position: static;
-                width: 292px;
-                height: 44px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 12px 24px 12px 24px;
-                flex: none;
-                order: 0;
-                flex-grow: 1;
-                margin: 0px 0px;
-
-                input {
-                    margin-right: 15px;
-                    position: static;
-                    width: 20px;
-                    height: 20px;
-                    box-sizing: border-box;
-                    border: 1px solid rgb(208, 213, 221);
-                    border-radius: 6px;
-                    background: rgb(255, 255, 255);
-                }
-            }
-            &-status {
-                position: static;
-                width: 120px;
-                height: 44px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 12px 24px 12px 24px;
-                img {
-                    position: static;
-                    width: 15px;
-                    height: 15px;
-                    box-sizing: border-box;
-                    order: 1;
-                    flex-grow: 0;
-                }
-            }
-            &-role {
-                position: static;
-                width: 176px;
-                height: 44px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 12px 24px 12px 24px;
-                img {
-                    position: static;
-                    width: 15px;
-                    height: 15px;
-                    box-sizing: border-box;
-                    order: 1;
-                    flex-grow: 0;
-                }
-            }
-            &-email {
-                position: static;
-                width: 224px;
-                height: 44px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 12px 24px 12px 24px;
-            }
+            position: static;
+            height: 44px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 12px 24px 12px 24px;
+            &-name,
+            &-status,
+            &-role,
+            &-email,
             &-team {
                 position: static;
-                width: 288px;
                 height: 44px;
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
                 padding: 12px 24px 12px 24px;
+
+                &-name {
+                    width: 292px;
+                    margin: 0;
+                    input {
+                        margin-right: 15px;
+                        width: 20px;
+                        height: 20px;
+                        box-sizing: border-box;
+                        border: 1px solid rgb(208, 213, 221);
+                        border-radius: 6px;
+                        background: rgb(255, 255, 255);
+                    }
+                }
+
+                &-status,
+                &-role {
+                    width: 120px;
+                    img {
+                        width: 15px;
+                        height: 15px;
+                        box-sizing: border-box;
+                        order: 1;
+                        flex-grow: 0;
+                    }
+                }
+
+                &-role {
+                    width: 176px;
+                }
+
+                &-email {
+                    width: 224px;
+                }
+
+                &-team {
+                    width: 288px;
+                }
             }
         }
     }
+
     &__line {
         flex-direction: row;
         justify-content: flex-start;
