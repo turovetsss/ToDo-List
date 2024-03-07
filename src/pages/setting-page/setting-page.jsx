@@ -14,6 +14,8 @@ import { TabsContainer } from 'components/tab';
 import { classname } from 'utils';
 const cn = classname('setting');
 
+import { CustomSelect } from 'components/select';
+
 import './setting-page.scss';
 export const SettingPage = () => {
     return (
@@ -97,6 +99,8 @@ export const SettingPage = () => {
 
             <div className={cn('main')}>
                 <h2>Settings</h2>
+
+                <CustomSelect />
                 <TabsContainer />
                 <div className={cn('main-content')}>
                     <div className={cn('main-content-group')} id='content2'>
