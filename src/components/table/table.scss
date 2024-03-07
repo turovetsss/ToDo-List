@@ -3,6 +3,9 @@
     border-collapse: collapse;
 
     &__header {
+        th {
+            padding: 12px 24px 12px 24px;
+        }
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
@@ -12,79 +15,13 @@
         background: rgb(249, 250, 251);
         color: rgb(102, 112, 133);
         font-weight: 500;
+
         line-height: 18px;
         letter-spacing: 0%;
-        text-align: left;
+        text-align: center;
 
         p {
-            padding-right: 10px;
-            color: rgb(102, 112, 133);
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 18px;
-            letter-spacing: 0%;
-            text-align: left;
-        }
-
-        &__row {
-            position: static;
-            height: 44px;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 12px 24px 12px 24px;
-            &-name,
-            &-status,
-            &-role,
-            &-email,
-            &-team {
-                position: static;
-                height: 44px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 12px 24px 12px 24px;
-
-                &-name {
-                    width: 292px;
-                    margin: 0;
-                    input {
-                        margin-right: 15px;
-                        width: 20px;
-                        height: 20px;
-                        box-sizing: border-box;
-                        border: 1px solid rgb(208, 213, 221);
-                        border-radius: 6px;
-                        background: rgb(255, 255, 255);
-                    }
-                }
-
-                &-status,
-                &-role {
-                    width: 120px;
-                    img {
-                        width: 15px;
-                        height: 15px;
-                        box-sizing: border-box;
-                        order: 1;
-                        flex-grow: 0;
-                    }
-                }
-
-                &-role {
-                    width: 176px;
-                }
-
-                &-email {
-                    width: 224px;
-                }
-
-                &-team {
-                    width: 288px;
-                }
-            }
+            display: inline;
         }
     }
 
@@ -102,159 +39,38 @@
         line-height: 18px;
         letter-spacing: 0%;
         text-align: left;
-        &__cell {
+        td {
             box-sizing: border-box;
             border-bottom: 1px solid rgb(234, 236, 240);
             display: table-cell;
-            &-edit {
-                position: static;
-                width: 116px;
-                height: 72px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 16px;
 
-                img {
-                    margin-right: 10px;
-                }
-            }
-            &-team {
-                position: static;
-                width: 288px;
-                height: 72px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 16px 24px 16px 24px;
-                &-first {
-                    margin-right: 5px;
-                    position: static;
-                    width: 56px;
-                    height: 22px;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 2px 8px 2px 8px;
-                    border-radius: 16px;
-                    background: rgb(249, 245, 255);
-                    color: rgb(105, 65, 198);
-                    font-size: 12px;
-                    font-weight: 500;
-                    line-height: 18px;
-                    letter-spacing: 0%;
-                    text-align: center;
-                }
-                &-second {
-                    margin-right: 5px;
-                    position: static;
-                    width: 62px;
-                    height: 22px;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 2px 8px 2px 8px;
-                    flex: none;
-                    order: 0;
-                    flex-grow: 0;
-                    border-radius: 16px;
-                    background: rgb(239, 248, 255);
-                    color: rgb(23, 92, 211);
-                    font-size: 12px;
-                    font-weight: 500;
-                    line-height: 18px;
-                    letter-spacing: 0%;
-                    text-align: center;
-                }
-                &-third {
-                    margin-right: 5px;
-                    position: static;
-                    width: 74px;
-                    height: 22px;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 2px 8px 2px 8px;
-                    border-radius: 16px;
-                    background: rgb(238, 244, 255);
-                    color: rgb(53, 56, 205);
-                    font-size: 12px;
-                    font-weight: 500;
-                    line-height: 18px;
-                    letter-spacing: 0%;
-                    text-align: center;
-                }
-                &-etc {
-                    position: static;
-                    width: 32px;
-                    height: 22px;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 2px 8px 2px 8px;
-                    border-radius: 16px;
-                    background: rgb(242, 244, 247);
-                    color: rgb(52, 64, 84);
-                    font-size: 12px;
-                    font-weight: 500;
-                    line-height: 18px;
-                    letter-spacing: 0%;
-                    text-align: center;
-                }
-            }
-            &-role {
-                position: static;
-                width: 176px;
-                height: 72px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 16px 24px 16px 24px;
-                p {
-                    margin: 15px;
-                    color: rgb(102, 112, 133);
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 20px;
-                    letter-spacing: 0%;
-                    text-align: left;
-                }
+            p {
+                margin: 15px;
+                color: rgb(102, 112, 133);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0%;
+                text-align: left;
             }
 
-            &-status {
+            span {
+                border-radius: 16px;
+                background: rgb(236, 253, 243);
                 position: static;
-                width: 120px;
-                height: 72px;
+                width: 65px;
+                height: 22px;
                 display: flex;
                 flex-direction: row;
-                justify-content: flex-start;
+                justify-content: center;
                 align-items: center;
-                padding: 16px 24px 16px 24px;
-                span {
-                    border-radius: 16px;
-                    background: rgb(236, 253, 243);
-                    position: static;
-                    width: 65px;
-                    height: 22px;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 2px 8px 2px 6px;
-                    color: rgb(2, 122, 72);
-                    font-size: 12px;
-                    font-weight: 500;
-                    line-height: 18px;
-                    letter-spacing: 0%;
-                    text-align: center;
-                }
+                padding: 2px 8px 2px 6px;
+                color: rgb(2, 122, 72);
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 18px;
+                letter-spacing: 0%;
+                text-align: center;
             }
             &-user {
                 position: static;

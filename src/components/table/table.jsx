@@ -14,64 +14,48 @@ export const Table = () => {
         <table className={cn()}>
             <thead>
                 <tr className={cn('header')}>
-                    <div className={cn('header__row')}>
-                        <th className={cn('header__row-name')}>
-                            <input type='checkbox' />
-                            <p>Name</p>
-                        </th>
-                    </div>
-                    <div className={cn('header__row')}>
-                        <th className={cn('header__row-status')}>
-                            <p>Status</p>
-                            <img src={down} alt='' />
-                        </th>
-                    </div>
-                    <div className={cn('header__row')}>
-                        <th className={cn('header__row-role')}>
-                            <p>Role</p>
-                            <img src={help} alt='' />
-                        </th>
-                    </div>
-                    <div className={cn('header__row')}>
-                        <th className={cn('header__row-email')}>
-                            <p>Email address</p>
-                        </th>
-                    </div>
-                    <div className={cn('header__row')}>
-                        <th className={cn('header__row-team')}>
-                            <p>Team</p>
-                        </th>
-                    </div>
-                    <div className={cn('header__row')}>
+                    <th>
+                        <input type='checkbox' /> <p>Name</p>
+                    </th>
+                    <th>
+                        <p>Status</p>
+                        <img src={down} alt='' />
+                    </th>
+                    <th>
+                        <p>Role</p> <img src={help} alt='' />
+                    </th>
+                    <th>
+                        <p>Email address</p>
+                    </th>
+                    <th>
+                        <p>Team</p>
+                    </th>
+                    <th>
                         <th></th>
-                    </div>
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 {tableData.map(row => (
                     <tr className={cn('line')} key={row.id}>
-                        <td className={cn('line__cell')}>
-                            <div className={cn('line__cell-user')}>
-                                <input type='checkbox' />
+                        <td>
+                            <input type='checkbox' /> <img src={help} alt='' />{' '}
+                            <a>
+                                {row.name}
 
-                                <div className={cn('line__cell-user-text')}>
-                                    <p>{row.name} </p>
-                                    <h6>{row.login}</h6>
-                                </div>
-                            </div>
+                                {row.login}
+                            </a>
                         </td>
-                        <td className={cn('line__cell')}>
-                            <div className={cn('line__cell-status')}>
-                                <span>{row.status} </span>
-                            </div>
+                        <td>
+                            <span>{row.status}</span>
                         </td>
-                        <td className={cn('line__cell')}>
-                            <div className={cn('line__cell-role')}>
+                        <td>
+                            <div>
                                 <p>{row.role}</p>
                             </div>
                         </td>
-                        <td className={cn('line__cell')}>
-                            <div className={cn('line__cell-role')}>
+                        <td>
+                            <div>
                                 <p>{row.email}</p>
                             </div>
                         </td>
