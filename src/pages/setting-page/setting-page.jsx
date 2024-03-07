@@ -99,8 +99,6 @@ export const SettingPage = () => {
 
             <div className={cn('main')}>
                 <h2>Settings</h2>
-
-                <CustomSelect />
                 <TabsContainer />
                 <div className={cn('main-content')}>
                     <div className={cn('main-content-group')} id='content2'>
@@ -148,9 +146,7 @@ export const SettingPage = () => {
                         <div className={cn('main-content-group-text')}>
                             <p>Country</p>
                         </div>
-                        <select className={cn('main-content-group-select')}>
-                            <option value='first'>United States</option>
-                        </select>
+                        <CustomSelect />
                     </div>
                 </div>
                 <hr></hr>
@@ -159,9 +155,7 @@ export const SettingPage = () => {
                         <div className={cn('main-content-group-text')}>
                             <p>TimeZone</p>
                         </div>
-                        <select className={cn('main-content-group-select')}>
-                            <option value='first'>Pacific Standard Time (PST) UTC−08:00</option>
-                        </select>
+                        <CustomSelect />
                     </div>
                 </div>
                 <hr></hr>
