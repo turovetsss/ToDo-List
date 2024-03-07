@@ -39,7 +39,7 @@ export const Table = () => {
                 {tableData.map(row => (
                     <tr className={cn('line')} key={row.id}>
                         <td>
-                            <input type='checkbox' /> <img src={help} alt='' />{' '}
+                            <input type='checkbox' /> <img src={row.image} alt='' />
                             <a>
                                 {row.name}
 

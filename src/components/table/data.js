@@ -6,6 +6,7 @@ export const tableData = [
         status: 'Active',
         role: 'Product Designer',
         email: 'olivia@untitledui.com',
+        image: require('assets/img/Avatar.png'),
         team: ['Design', 'Product', 'Marketing', '+4'],
     },
     {
@@ -15,6 +16,7 @@ export const tableData = [
         status: 'Active',
         role: 'Product Designer',
         email: 'olivia@untitledui.com',
+        image: require('assets/img/Avatar.png'),
         team: ['Design', 'Product', 'Marketing', '+4'],
     },
 ];
