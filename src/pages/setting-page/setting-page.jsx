@@ -15,6 +15,7 @@ import { classname } from 'utils';
 const cn = classname('setting');
 
 import { CustomSelect } from 'components/select';
+import { tabsData } from 'components/tab/data';
 
 import './setting-page.scss';
 export const SettingPage = () => {
@@ -99,7 +100,8 @@ export const SettingPage = () => {
 
             <div className={cn('main')}>
                 <h2>Settings</h2>
-                <TabsContainer />
+                <TabsContainer tabsData={tabsData} />
+
                 <div className={cn('main-content')}>
                     <div className={cn('main-content-group')} id='content2'>
                         <div className={cn('main-content-group-text')}>

@@ -1,27 +1,26 @@
-import React from 'react';
-import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
+import { React, useState } from 'react';
+import { classname } from 'utils';
 
 import './tab.scss';
-export const TabsContainer = () => {
+const cn = classname('tabs');
+
+export const TabsContainer = ({ tabsData }) => {
+    const [activeTab, setActiveTab] = useState(0);
+
+    const handleTabClick = index => {
+        setActiveTab(index);
+    };
+
     return (
-        <Tabs className='tabs'>
-            <TabList>
-                <Tab className='tab'>My details</Tab>
-                <Tab className='tab'>Profile</Tab>
-                <Tab className='tab'>Password</Tab>
-                <Tab className='tab'>Team</Tab>
-                <Tab className='tab'>Plan</Tab>
-                <Tab className='tab'>Billing</Tab>
-                <Tab className='tab'>Email</Tab>
-                <Tab className='tab'>Notifications</Tab>
-                <Tab className='tab'>Integrations</Tab>
-                <Tab className='tab'>API</Tab>
-            </TabList>
-            <TabPanel></TabPanel>
-            <TabPanel></TabPanel>
-            <TabPanel>
-                <div></div>
-            </TabPanel>
-        </Tabs>
+        <div className={cn()}>
+            <div className={cn('buttons')}>
+                {tabsData.map((tab, index) => (
+                    <button key={index} className={cn(`tab ${index === activeTab ? 'active' : ''}`)} onClick={() => handleTabClick(index)}>
+                        {tab.label}
+                    </button>
+                ))}
+            </div>
+            <div className={cn('content')}>{tabsData[activeTab].content}</div>
+        </div>
     );
 };

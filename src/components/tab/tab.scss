@@ -1,20 +1,34 @@
 .tabs {
-    margin-left: -30px;
-    background: #fff;
-    display: flex;
-}
-.TabList {
-    background: #fff;
-    display: flex;
-}
-.tab {
-    background: #fff;
-    display: inline;
-    margin-right: 30px;
-}
+    &__buttons {
+        display: flex;
+    }
 
-.react-tabs__tab--selected {
-    border-bottom: 2px solid #6941c6;
-    color: #6941c6;
-    text-decoration: none;
+    &__tab {
+        padding: 16px 4px;
+        cursor: pointer;
+        border: none;
+        background-color: #ffffff;
+        color: rgb(102, 112, 133);
+
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+
+        &:hover {
+            background-color: #e9e9e9;
+        }
+
+        &.active {
+            border-bottom: 2px solid #6941c6;
+            color: #6941c6;
+            text-decoration: none;
+        }
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+    &__content {
+        margin-top: 10px;
+    }
 }
