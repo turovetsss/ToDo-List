@@ -1,7 +1,7 @@
 import React from 'react';
+import left from 'assets/img/arrow-left.png';
+import right from 'assets/img/arrow-right.png';
 import { Table } from 'components/table';
-import left from 'pages/img/arrow-left.png';
-import right from 'pages/img/arrow-right.png';
 import { classname } from 'utils';
 
 import './table.scss';

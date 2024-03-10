@@ -1,6 +1,6 @@
 import React from 'react';
-import down from 'pages/img/arrow-down.png';
-import help from 'pages/img/Help-icon.png';
+import down from 'assets/img/arrow-down.png';
+import help from 'assets/img/Help-icon.png';
 import { classname } from 'utils';
 
 import { tableData } from './data';
