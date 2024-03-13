@@ -1,9 +1,8 @@
 import React from 'react';
-import down from 'assets/img/arrow-down.png';
-import help from 'assets/img/Help-icon.png';
+import { TeamBlock } from 'components/team-block';
 import { classname } from 'utils';
 
-import { tableData } from './data';
+import { headerData, tableData } from './data';
 
 import './table.scss';
 
@@ -13,62 +12,52 @@ export const Table = () => {
     return (
         <table className={cn()}>
             <thead>
-                <tr className={cn('header')}>
-                    <th>
-                        <input type='checkbox' /> <p>Name</p>
-                    </th>
-                    <th>
-                        <p>Status</p>
-                        <img src={down} alt='' />
-                    </th>
-                    <th>
-                        <p>Role</p> <img src={help} alt='' />
-                    </th>
-                    <th>
-                        <p>Email address</p>
-                    </th>
-                    <th>
-                        <p>Team</p>
-                    </th>
-                    <th>
-                        <th></th>
-                    </th>
-                </tr>
+                {headerData.map(row => (
+                    <tr className={cn('header')} key={row.id}>
+                        <th>
+                            <input type='checkbox' /> <p>{row.name}</p>
+                        </th>
+                        <th>
+                            <p>{row.status}</p>
+                            <img src={row.statusImg} alt='' />
+                        </th>
+                        <th>
+                            <p>{row.role}</p> <img src={row.roleImg} alt='' />
+                        </th>
+                        <th>
+                            <p>{row.email}</p>
+                        </th>
+                        <th>
+                            <p>{row.team}</p>
+                        </th>
+                        <th>
+                            <th></th>
+                        </th>
+                    </tr>
+                ))}
             </thead>
             <tbody>
                 {tableData.map(row => (
                     <tr className={cn('line')} key={row.id}>
                         <td>
                             <input type='checkbox' /> <img src={row.image} alt='' />
-                            <a>
-                                {row.name}
-
-                                {row.login}
-                            </a>
+                            <p> {row.name}</p>
                         </td>
                         <td>
                             <span>{row.status}</span>
                         </td>
                         <td>
-                            <div>
-                                <p>{row.role}</p>
-                            </div>
+                            <p>{row.role}</p>
                         </td>
                         <td>
-                            <div>
-                                <p>{row.email}</p>
-                            </div>
+                            <p>{row.email}</p>
                         </td>
-                        <td className={cn('line__cell')}>
-                            <div className={cn('line__cell-team')}>
-                                <div className={cn('line__cell-team-first')}>{row.team[0]}</div>
-                                <div className={cn('line__cell-team-second')}>{row.team[1]}</div>
-                                <div className={cn('line__cell-team-third')}>{row.team[2]}</div>
-                                <div className={cn('line__cell-team-etc')}>{row.team[3]}</div>
-                            </div>
+                        <td>
+                            <TeamBlock />
                         </td>
-                        <td className={cn('line__cell')}>
-                            <div className={cn('line__cell-edit')}></div>
+                        <td>
+                            <img src={row.edit} alt='' />
+                            <img src={row.trash} alt='' />
                         </td>
                     </tr>
                 ))}
