@@ -1,6 +1,6 @@
 import React from 'react';
-import { ButtonsPage, FormPage, HooksExamples, InputsPage, TablePage } from 'pages';
-
+import { ButtonsPage, FormPage, HooksExamples, InputsPage } from 'pages';
+import { TablePage } from 'pages';
 export const ROUTES = [
     {
         path: '/buttons',
