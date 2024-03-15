@@ -15,14 +15,16 @@ export const Table = () => {
                 {headerData.map(row => (
                     <tr className={cn('header')} key={row.id}>
                         <th>
-                            <input type='checkbox' /> <p>{row.name}</p>
+                            <input type='checkbox' />
+                            <p>{row.name}</p>
                         </th>
                         <th>
                             <p>{row.status}</p>
                             <img src={row.statusImg} alt='' />
                         </th>
                         <th>
-                            <p>{row.role}</p> <img src={row.roleImg} alt='' />
+                            <p>{row.role}</p>
+                            <img src={row.roleImg} alt='' />
                         </th>
                         <th>
                             <p>{row.email}</p>
@@ -40,8 +42,9 @@ export const Table = () => {
                 {tableData.map(row => (
                     <tr className={cn('line')} key={row.id}>
                         <td>
-                            <input type='checkbox' /> <img src={row.image} alt='' />
-                            <p> {row.name}</p>
+                            <input type='checkbox' />
+                            <img src={row.image} alt='' />
+                            <p>{row.name}</p>
                         </td>
                         <td>
                             <span>{row.status}</span>
