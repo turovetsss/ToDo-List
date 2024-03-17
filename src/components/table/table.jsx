@@ -1,69 +1,25 @@
 import React from 'react';
-import { TeamBlock } from 'components/team-block';
+import { TableHead } from 'components/table-head';
+import { TableRow } from 'components/table-row';
 import { classname } from 'utils';
-
-import { headerData, tableData } from './data';
+const cn = classname('table');
 
 import './table.scss';
 
-const cn = classname('table');
-
-export const Table = () => {
+export const Table = ({ theadData, tbodyData, customClass }) => {
     return (
         <table className={cn()}>
             <thead>
-                {headerData.map(row => (
-                    <tr className={cn('header')} key={row.id}>
-                        <th>
-                            <input type='checkbox' />
-                            <p>{row.name}</p>
-                        </th>
-                        <th>
-                            <p>{row.status}</p>
-                            <img src={row.statusImg} alt='' />
-                        </th>
-                        <th>
-                            <p>{row.role}</p>
-                            <img src={row.roleImg} alt='' />
-                        </th>
-                        <th>
-                            <p>{row.email}</p>
-                        </th>
-                        <th>
-                            <p>{row.team}</p>
-                        </th>
-                        <th>
-                            <th></th>
-                        </th>
-                    </tr>
-                ))}
+                <tr>
+                    {theadData.map(h => {
+                        return <TableHead key={h} item={h} />;
+                    })}
+                </tr>
             </thead>
             <tbody>
-                {tableData.map(row => (
-                    <tr className={cn('line')} key={row.id}>
-                        <td>
-                            <input type='checkbox' />
-                            <img src={row.image} alt='' />
-                            <p>{row.name}</p>
-                        </td>
-                        <td>
-                            <span>{row.status}</span>
-                        </td>
-                        <td>
-                            <p>{row.role}</p>
-                        </td>
-                        <td>
-                            <p>{row.email}</p>
-                        </td>
-                        <td>
-                            <TeamBlock />
-                        </td>
-                        <td>
-                            <img src={row.edit} alt='' />
-                            <img src={row.trash} alt='' />
-                        </td>
-                    </tr>
-                ))}
+                {tbodyData.map(item => {
+                    return <TableRow key={item.id} data={item.items} />;
+                })}
             </tbody>
         </table>
     );

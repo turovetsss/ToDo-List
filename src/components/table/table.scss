@@ -2,7 +2,7 @@
     width: 100%;
     border-collapse: collapse;
 
-    &__header {
+    thead {
         th {
             padding: 12px 24px 12px 24px;
         }
@@ -30,7 +30,7 @@
         }
     }
 
-    &__line {
+    tbody {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;

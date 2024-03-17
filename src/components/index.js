@@ -4,3 +4,6 @@ export * from './todo';
 export * from './button';
 export * from './input';
 export * from './hookform';
+export * from './table';
+export * from './table-head';
+export * from './table-row';

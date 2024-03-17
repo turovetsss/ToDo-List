@@ -1,0 +1,25 @@
+th {
+    padding: 12px 24px 12px 24px;
+    flex-direction: row;
+    align-items: center;
+    height: 67px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(234, 236, 240);
+    background: rgb(249, 250, 251);
+    color: rgb(102, 112, 133);
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: center;
+
+    p {
+        display: inline;
+        padding-right: 10px;
+        color: rgb(102, 112, 133);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+}

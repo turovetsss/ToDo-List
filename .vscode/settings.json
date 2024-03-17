@@ -4,4 +4,5 @@
       "source.fixAll.eslint": "explicit",
       "source.fixAll.stylelint": "explicit"
     },
+    "editor.fontSize": 10,
 }
