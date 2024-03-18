@@ -7,7 +7,7 @@ import { TableTitle } from 'components/title-table';
 import './table.scss';
 
 export const TablePage = () => {
-    const theadData = ['Name', 'Status', 'Role', 'Email addres', 'Team', ''];
+    const theadData = ['Name', 'Status', 'Role', 'Email addres', 'Team', '', '', '', ''];
 
     return (
         <div>

@@ -5,11 +5,45 @@
     line-height: 20px;
     letter-spacing: 0%;
     text-align: left;
-}
-.type0 {
-    border-radius: 16px;
-    background: rgb(236, 253, 243);
-}
-.let {
-    background-color: aqua;
+    .name {
+        border-radius: 16px;
+        color: rgb(16, 24, 40);
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .status {
+        border-radius: 16px;
+        color: rgb(2, 122, 72);
+        font-weight: 500;
+        background: rgb(236, 253, 243);
+        padding: 10px;
+    }
+    .team-desigh {
+        border-radius: 16px;
+        color: rgb(105, 65, 198);
+        background: rgb(249, 245, 255);
+        padding: 2px 8px 2px 8px;
+        font-weight: 500;
+    }
+    .team-product {
+        color: rgb(23, 92, 211);
+        border-radius: 16px;
+        background: rgb(239, 248, 255);
+        padding: 2px 8px 2px 8px;
+        font-weight: 500;
+    }
+    .team-marketing {
+        background: rgb(238, 244, 255);
+        border-radius: 16px;
+        color: rgb(53, 56, 205);
+        font-weight: 500;
+        padding: 2px 8px 2px 8px;
+    }
+    .team-etc {
+        color: rgb(52, 64, 84);
+        border-radius: 16px;
+        background: rgb(242, 244, 247);
+        font-weight: 500;
+        padding: 5px;
+    }
 }
